@@ -1,0 +1,53 @@
+{
+    "video1": {
+        "file": "videos/video1.mp4",
+        "checkpoints": [
+            {
+                "start": "00.23",
+                "end": "00.34",
+                "positionX": "0",
+                "positionY": "0"
+            },
+            {
+                "start": "00.37",
+                "end": "00.45",
+                "positionX": "0",
+                "positionY": "0"
+            }
+        ]
+    },
+    "video2": {
+        "file": "videos/video2.mp4",
+        "checkpoints": {
+            "0": {
+                "start": "00.23",
+                "end": "00.34",
+                "positionX": "0",
+                "positionY": "0"
+            },
+            "1": {
+                "start": "00.34",
+                "end": "00.45",
+                "positionX": "0",
+                "positionY": "0"
+            }
+        }
+    },
+    "video3": {
+        "file": "videos/video3.mp4",
+        "checkpoints": {
+            "0": {
+                "start": "00.23",
+                "end": "00.34",
+                "positionX": "0",
+                "positionY": "0"
+            },
+            "1": {
+                "start": "00.34",
+                "end": "00.45",
+                "positionX": "0",
+                "positionY": "0"
+            }
+        }
+    }
+}
