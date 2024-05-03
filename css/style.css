@@ -2,7 +2,7 @@
 :root {
     --bg-color: #ddf4ff;
     --primmary-color: #0c4da2;
-    --secondary-color: #223347;
+    --secondary-color: #242424;
     --secondary-color-50-opacity: #22334750;
     --black-color: #0a0a0a;
     --white-color: #f6f6f6;
@@ -23,7 +23,7 @@
 }
 @font-face {
     font-family: "SecondaryFont";
-    src: url(../fonts/HamburgerHeaven.ttf);
+    src: url(../fonts/Staatliches-Regular.ttf);
 }
 
 /* Start of reset styles */
@@ -101,19 +101,45 @@ main {
     gap: 30px;
 }
 
+.container-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
 .container-videoPlayer {
     width: 60%;
 }
 
-.container-bottom {
+.section-box {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
+    flex-direction: column;
+    color: var(--white-color);
+    font-family: SecondaryFont;
+    font-size: 2rem;
+    flex-grow: 1;
+    --shadow-color: 197deg 32% 65%;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 .5px .6px hsl(var(--shadow-color) / .36),
+        0 1.7px 1.9px -.8px hsl(var(--shadow-color) / .36),
+        0 4.3px 4.8px -1.7px hsl(var(--shadow-color) / .36),
+        -.1px 10.6px 11.9px -2.5px hsl(var(--shadow-color) / .36);
 }
 
+.header-container {
+    border-radius: 12px 12px 0 0;
+    height: 60px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.box-container {
+    height: 100%;
+    background-color: var(--primmary-color);
+    border-radius: 0 0 12px 12px;
+}
 
 .plyr {
     --plyr-color-main: var(--primmary-color);
