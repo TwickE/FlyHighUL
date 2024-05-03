@@ -11,13 +11,26 @@
     <title>Fly High UL</title>
 </head>
 <body>
-   
-    <div class="container">
-        <video id="myVideo" src="videos/video1.mp4" controls></video>
-    </div>
+    <header>
+        <img src="resources/FlyHighUL_Logo.webp" alt="">
+        <div id="timer" style="color: white; font-size: 30px;">00.00</div>
+        <img src="resources/FCUL_Logo.webp" alt="">
+    </header>
+    <main>
+        <div class="container-top">
+            <div class="container-videoPlayer">
+                <video id="myVideo" src="videos/video1.mp4" controls></video>
+            </div>
+            <div style="background-color: blue; flex-grow: 1;"></div>
+        </div>
+        <div class="container-bottom">
+            <div style="background-color: blueviolet; width: 60%; height: 200px;"></div>
+            <div style="background-color: red; flex-grow: 1;"></div>
+        </div>
+    </main>
 
 
-    <div id="timer" style="color: black; font-size: 30px;">00.00</div>
+    
     <div id="square" style="width: 60px; height: 60px; background-color: yellow; display: none;"></div>
 </body>
 </html>

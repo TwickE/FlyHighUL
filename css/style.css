@@ -1,7 +1,130 @@
+/* Defining variables */
 :root {
-    --plyr-color-main: #0C4DA2;
-  }
+    --bg-color: #ddf4ff;
+    --primmary-color: #0c4da2;
+    --secondary-color: #223347;
+    --secondary-color-50-opacity: #22334750;
+    --black-color: #0a0a0a;
+    --white-color: #f6f6f6;
+}
 
-.container {
-    width: 740px;
+/* Custom fonts */
+@font-face {
+    font-family: "PrimmaryFontBold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "PrimmaryFontMedium";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "PrimmaryFontRegular";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "SecondaryFont";
+    src: url(../fonts/HamburgerHeaven.ttf);
+}
+
+/* Start of reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of reset styles */
+
+
+
+/* Normal styles */
+header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background-color: var(--primmary-color);
+}
+
+header img {
+    max-height: 44px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 70px;
+}
+
+.container-top {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.container-videoPlayer {
+    width: 60%;
+}
+
+.container-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+
+.plyr {
+    --plyr-color-main: var(--primmary-color);
+    --shadow-color: 197deg 32% 65%;
+    border-radius: 12px;
+    box-shadow: 0 .5px .6px hsl(var(--shadow-color) / .36),
+        0 1.7px 1.9px -.8px hsl(var(--shadow-color) / .36),
+        0 4.3px 4.8px -1.7px hsl(var(--shadow-color) / .36),
+        -.1px 10.6px 11.9px -2.5px hsl(var(--shadow-color) / .36);
+}
+
+body {
+    background-color: var(--bg-color);
 }
