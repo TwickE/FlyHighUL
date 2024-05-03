@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/plyr.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/plyr.js"></script>
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <title>Fly High UL</title>
 </head>
 <body>
-    <video id="myVideo" src="videos/video1.mp4" width="740px" height="600px" controls controlsList="nofullscreen"></video>
-    <div id="timer" style="color: black; font-size: 30px;"> </div>
+   
+    <div class="container">
+        <video id="myVideo" src="videos/video1.mp4" controls></video>
+    </div>
 
+
+    <div id="timer" style="color: black; font-size: 30px;">00.00</div>
     <div id="square" style="width: 60px; height: 60px; background-color: yellow; display: none;"></div>
 </body>
 </html>

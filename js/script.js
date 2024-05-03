@@ -1,4 +1,23 @@
-var currentTimeStamp = "00.00";
+// Change the second argument to your options:
+// https://github.com/sampotts/plyr/#options
+const player = new Plyr('video', {
+    controls: [
+        'play-large',
+        'rewind',
+        'play',
+        'fast-forward',
+        'progress',
+        'current-time',
+        'duration',
+        'mute',
+        'volume'
+    ],
+});
+
+// Expose player so it can be used from the console
+window.player = player;
+
+let currentTimeStamp = "00.00";
 document.getElementById("myVideo").addEventListener('timeupdate', function() {
     var video = document.getElementById("myVideo");
     var hours = parseInt(video.currentTime / (60 * 60), 10);
