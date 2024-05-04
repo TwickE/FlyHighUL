@@ -55,3 +55,21 @@ function getCheckpoints() {
             console.error('Error:', error);
         });
 }
+
+
+//Functions for CSS
+function resizeInformationWindow() {
+    const videoPlayer = document.getElementById('myVideo');
+    const boxContainer = document.querySelector('.box-container');
+    let videoPlayerHeight = window.getComputedStyle(videoPlayer).getPropertyValue('height');
+    videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
+    console.log(videoPlayerHeight);
+    boxContainer.style.maxHeight = videoPlayerHeight - 60 + "px";
+}
+window.addEventListener('load', () => {
+    resizeInformationWindow();
+});
+
+window.addEventListener('resize', () => {
+    resizeInformationWindow();
+});
