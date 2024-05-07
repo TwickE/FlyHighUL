@@ -3,9 +3,9 @@
     --bg-color: #ddf4ff;
     --primmary-color: #0c4da2;
     --secondary-color: #242424;
-    --secondary-color-50-opacity: #22334750;
     --black-color: #0a0a0a;
     --white-color: #f6f6f6;
+    --btn-active: #093f84;
 }
 
 @font-face {
@@ -100,6 +100,48 @@ main {
 
 .container-videoPlayer {
     min-width: 60%;
+    height: fit-content;
+}
+
+.container-videoNavigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.container-videoNavigation h2 {
+    background-color: var(--primmary-color);
+    padding: 9px 50px;
+    border-radius: 12px;
+    font-family: SecondaryFont;
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.container-videoNavigation button {
+    background-color: var(--primmary-color);
+    padding: 3px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.container-videoNavigation button:hover {
+    border: 2px solid var(--white-color);
+}
+
+.container-videoNavigation button:active {
+    background-color: var(--btn-active);
+}
+
+.container-videoNavigation button img {
+    width: 100%;
+    height: auto;
 }
 
 .section-box {
@@ -128,7 +170,6 @@ main {
 }
 
 .box-container {
-    height: 100%;
     display: flex;
     background-color: var(--primmary-color);
     border-radius: 0 0 12px 12px;

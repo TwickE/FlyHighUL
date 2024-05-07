@@ -76,12 +76,13 @@ function getCheckpoints(videoSrc) {
 
 //Functions for CSS
 function resizeInformationWindow() {
-    const videoPlayer = document.getElementById('myVideo');
+    const sectionVideoPlayer = document.getElementsByClassName('container-videoPlayer')[0];
+    console.log(sectionVideoPlayer);
     const boxContainer = document.querySelector('.box-container');
-    let videoPlayerHeight = window.getComputedStyle(videoPlayer).getPropertyValue('height');
-    videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
+    let videoPlayerHeight = window.getComputedStyle(sectionVideoPlayer).getPropertyValue('height');
     console.log(videoPlayerHeight);
-    boxContainer.style.maxHeight = videoPlayerHeight - 60 + "px";
+    videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
+    boxContainer.style.height = videoPlayerHeight - 60 + "px";
 }
 window.addEventListener('load', () => {
     resizeInformationWindow();
