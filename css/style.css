@@ -108,14 +108,13 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    height: 50px;
-    margin-bottom: 10px;
+    height: 60px;
+    background-color: var(--secondary-color);
+    border-radius: 12px 12px 0 0;
 }
 
 .container-videoNavigation h2 {
-    background-color: var(--primmary-color);
-    padding: 9px 50px;
-    border-radius: 12px;
+    padding: 0 50px;
     font-family: SecondaryFont;
     font-size: 2rem;
     color: var(--white-color);
@@ -190,7 +189,7 @@ main {
 .plyr {
     --plyr-color-main: var(--primmary-color);
     --shadow-color: 197deg 32% 65%;
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px;
     box-shadow: 0 .5px .6px hsl(var(--shadow-color) / .36),
         0 1.7px 1.9px -.8px hsl(var(--shadow-color) / .36),
         0 4.3px 4.8px -1.7px hsl(var(--shadow-color) / .36),
