@@ -105,7 +105,7 @@ main {
 
 .container-videoNavigation {
     display: grid;
-    grid-template-columns: repeat(3, 0.33fr) repeat(2, 1fr);
+    grid-template-columns: repeat(3, 0.33fr) 2fr 1fr;
     grid-template-rows: 1fr;
     height: 60px;
     background-color: var(--secondary-color);
@@ -126,8 +126,8 @@ main {
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .container-videoNavigation button:hover {
