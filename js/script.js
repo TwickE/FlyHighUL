@@ -77,12 +77,17 @@ function getCheckpoints(videoSrc) {
 //Functions for CSS
 function resizeInformationWindow() {
     const sectionVideoPlayer = document.getElementsByClassName('container-videoPlayer')[0];
-    console.log(sectionVideoPlayer);
     const boxContainer = document.querySelector('.box-container');
     let videoPlayerHeight = window.getComputedStyle(sectionVideoPlayer).getPropertyValue('height');
-    console.log(videoPlayerHeight);
     videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
     boxContainer.style.height = videoPlayerHeight - 60 + "px";
+
+    const sectionGaleria = document.getElementsByClassName('section-galeria')[0];
+    const boxContainerLocation = document.querySelector('.box-container-location');
+    let galleryHeight = window.getComputedStyle(sectionGaleria).getPropertyValue('height');
+    galleryHeight = galleryHeight.substring(0, galleryHeight.length - 2);
+    boxContainerLocation.style.height = galleryHeight - 100 + "px";
+
 }
 window.addEventListener('load', () => {
     resizeInformationWindow();
@@ -90,4 +95,93 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
     resizeInformationWindow();
+});
+
+
+
+
+const list = document.querySelector('.slider .list');
+const items = document.querySelectorAll('.slider .list .item');
+const dots = document.querySelectorAll('.slider .dots li');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+let active = 0;
+let lenghtItems = items.length - 1;
+
+// Click for the next slide
+next.addEventListener('click', () => {
+    goRight();
+});
+
+// Click for the previous slide
+prev.addEventListener('click', () => {
+    goLeft();
+});
+
+// Next slide
+function goRight() {
+    if(active + 1 > lenghtItems) {
+        active = 0;
+    }else {
+        active++;
+    }
+    reloadslider();
+}
+
+// Previous slide
+function goLeft() {
+    if(active - 1 < 0) {
+        active = lenghtItems;
+    }else {
+        active--;
+    }
+    reloadslider();
+}
+
+let startX;
+let startY;
+
+// Detects the touch on the slider
+items.forEach((item) => {
+    item.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    });
+
+    item.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const deltaX = endX - startX;
+
+        const endY = e.changedTouches[0].clientY;
+        const deltaY = endY - startY;
+
+        if (deltaX > 0 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            goLeft();
+        } else if (deltaX < 0 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            goRight();
+        }
+    });
+});
+
+let automaticSlide = setInterval(() => {next.click()}, 5000); // Makes the slider automatic
+
+// Moves the slider to the active slide
+function reloadslider() {
+    let checkLeft = items[active].offsetLeft;
+    list.style.left = `-${checkLeft}px`;
+
+    const lastActiveDot = document.querySelector('.slider .dots li.active');
+    lastActiveDot.classList.remove('active');
+    dots[active].classList.add('active');
+    clearInterval(automaticSlide);
+    automaticSlide = setInterval(() => {next.click()}, 5000);
+}
+
+// Click on the dots to move the slide
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        active = index;
+        reloadslider();
+    });
 });
