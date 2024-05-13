@@ -6,47 +6,46 @@
                 "start": "00.23",
                 "end": "00.34",
                 "positionX": "0",
-                "positionY": "0"
+                "positionY": "0",
+                "title": "Faculdade de Ciências Edifício - C6",
+                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o",
+                "mapLocation": "resources/location/FCUL-06.png",
+                "imagens": [
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png"
+                ],
+                "video": "videos/video1.mp4"
             },
             {
-                "start": "00.37",
-                "end": "00.45",
-                "positionX": "0",
-                "positionY": "0"
+                
             }
         ]
     },
     "video2": {
-        "file": "videos/video2.mp4",
+        "file": "videos/video1.mp4",
         "checkpoints": [
             {
                 "start": "00.23",
                 "end": "00.34",
                 "positionX": "0",
-                "positionY": "0"
+                "positionY": "0",
+                "title": "Faculdade de Ciências Edifício - C6",
+                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o",
+                "mapLocation": "resources/location/FCUL-06.png",
+                "imagens": [
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png",
+                    "resources/images/FCUL-06.png"
+                ],
+                "video": "videos/video1.mp4"
             },
             {
-                "start": "00.37",
-                "end": "00.45",
-                "positionX": "0",
-                "positionY": "0"
-            }
-        ]
-    },
-    "video3": {
-        "file": "videos/video3.mp4",
-        "checkpoints": [
-            {
-                "start": "00.23",
-                "end": "00.34",
-                "positionX": "0",
-                "positionY": "0"
-            },
-            {
-                "start": "00.37",
-                "end": "00.45",
-                "positionX": "0",
-                "positionY": "0"
+                
             }
         ]
     }
