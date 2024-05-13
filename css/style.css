@@ -98,7 +98,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 30px 70px;
+    margin: 70px 30px;
 }
 
 .container-top {
@@ -417,4 +417,73 @@ main {
     border-top: 10px solid transparent;
     border-left: 20px solid black;
     border-bottom: 10px solid transparent;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h2 {
+    font-family: SecondaryFont;
+    font-size: 2.5rem;
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0 15px 0;
+    background-color: var(--primmary-color);
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    padding: 50px 0px;
+    gap: 70px;
+    background-color: var(--secondary-color);
+}
+
+.container-developers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container-developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-developer img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primmary-color);
+}
+
+.container-developer h3 {
+    font-family: SecondaryFont;
+    font-size: 2rem;
+    color: var(--white-color);
+    margin: 25px 0 15px 0;
+}
+
+.container-developer p {
+    font-family: SecondaryFont;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.container-logos {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.container-logos img {
+    height: 80px;
 }
