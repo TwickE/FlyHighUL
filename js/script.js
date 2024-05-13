@@ -81,13 +81,6 @@ function resizeInformationWindow() {
     let videoPlayerHeight = window.getComputedStyle(sectionVideoPlayer).getPropertyValue('height');
     videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
     boxContainer.style.height = videoPlayerHeight - 60 + "px";
-
-    const sectionGaleria = document.getElementsByClassName('section-galeria')[0];
-    const boxContainerLocation = document.querySelector('.box-container-location');
-    let galleryHeight = window.getComputedStyle(sectionGaleria).getPropertyValue('height');
-    galleryHeight = galleryHeight.substring(0, galleryHeight.length - 2);
-    boxContainerLocation.style.height = galleryHeight - 100 + "px";
-
 }
 window.addEventListener('load', () => {
     resizeInformationWindow();
