@@ -276,8 +276,6 @@ main {
 .list img {
 	max-width: fit-content;
 	height: 100%;
-    /* max-height: fit-content;
-    width: 100%; */
 	object-fit: cover;
 	aspect-ratio: 16/9;
 }
@@ -562,6 +560,22 @@ footer h2 {
 
     .section-box {
         font-size: 1.5rem;
+    }
+
+    .slider {
+        aspect-ratio: 1/1;
+    }
+    
+    .list img {
+        aspect-ratio: 1/1;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .dots-container {
+        bottom: 10px;
     }
 
     footer h2 {
