@@ -75,6 +75,8 @@ function getCheckpoints(videoSrc) {
 
 
 //Functions for CSS
+
+// Resize the information window based on the video player height
 function resizeInformationWindow() {
     const sectionVideoPlayer = document.getElementsByClassName('container-videoPlayer')[0];
     const boxContainer = document.querySelector('.box-container');
@@ -92,7 +94,7 @@ window.addEventListener('resize', () => {
 
 
 
-
+// Image Slider functions
 const list = document.querySelector('.slider .list');
 const items = document.querySelectorAll('.slider .list .item');
 const dots = document.querySelectorAll('.slider .dots li');
