@@ -4,6 +4,7 @@
     --primmary-color: #0c4da2;
     --primmary-color-30-opacity: rgba(12, 77, 162, 0.3);
     --secondary-color: #242424;
+    --interactable-color: rgba(12, 77, 162, 0.5);
     --black-color: #0a0a0a;
     --white-color: #f6f6f6;
     --btn-active: #093f84;
@@ -378,7 +379,7 @@ main {
     margin: 0 20px 0 20px;
     aspect-ratio: 16/9;
     border-radius: 5px;
-    background-image: url('../resources/images/FCUL_C6_image1.png');
+    background-image: url('../resources/buildings/FCUL_C6_image1.png');
     background-size: cover;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -494,6 +495,43 @@ footer h2 {
     height: 80px;
 }
 
+#interactable {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--interactable-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: interactibleAnimation 2s infinite ease-in-out;
+}
+
+#interactable span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+
+@keyframes interactibleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#interactable span:active {
+    background-color: var(--primmary-color);
+}
+
 @media(max-width: 1150px) {
     .container-top {
         flex-direction: column;
@@ -512,6 +550,13 @@ footer h2 {
 }
 
 @media(max-width: 750px) {
+    .box-container {
+        display: flex;
+        background-color: var(--primmary-color);
+        border-radius: 0 0 12px 12px;
+        min-height: 400px;
+    }
+
     .container-galeria-video {
         flex-direction: column;
     }

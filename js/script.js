@@ -64,7 +64,7 @@ function getCheckpoints(videoSrc) {
                         }
                     }
                     // set the display based on whether timestamp is within any checkpoint
-                    document.getElementById("square").style.display = isWithinCheckpoint ? "block" : "none";
+                    document.getElementById("interactable").style.display = isWithinCheckpoint ? "flex" : "none";
                 }
             }   
         })
@@ -72,6 +72,41 @@ function getCheckpoints(videoSrc) {
             console.error('Error:', error);
         });
 }
+
+
+
+
+
+
+window.addEventListener('load', () => {
+    positionCircle(0.4, 0.4);
+});
+
+window.addEventListener('resize', () => {
+    positionCircle(0.4, 0.4);
+});
+
+function positionCircle(horizontalOffsetRatio, verticalOffsetRatio) {
+    const video = document.getElementById('myVideo');
+    const circle = document.getElementById('interactable');
+
+    const videoRect = video.getBoundingClientRect();
+    const videoX = videoRect.left; // No need for adjustment, already relative to viewport
+    const videoY = videoRect.top; // No need for adjustment, already relative to viewport
+
+    // Calculate the left and top positions for the circle to be at the top-left corner of the video
+    let circleLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - 15;
+    let circleTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - 15;
+
+    circle.style.left = circleLeft + 'px';
+    circle.style.top = circleTop + 'px';
+}
+
+
+
+
+
+
 
 
 //Functions for CSS
