@@ -212,6 +212,7 @@ main {
 }
 
 .scrollable-text-container {
+    width: 100%;
     overflow-y: scroll;
     margin: 20px;
     padding: 15px;
@@ -390,7 +391,7 @@ main {
     margin: 0 20px 0 20px;
     aspect-ratio: 16/9;
     border-radius: 5px;
-    background-image: url('../resources/buildings/FCUL_C6_image1.png');
+    /* background-image: url('../resources/buildings/FCUL_C6_image1.png'); */
     background-size: cover;
     cursor: pointer;
     transition: all 0.3s ease-in-out;

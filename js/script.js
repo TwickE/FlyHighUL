@@ -22,7 +22,12 @@ const player = new Plyr('video', {
         'volume'
     ],
 });
-window.player = player; // Expose player so it can be used from the console
+window.player = player; // Expose player so it can be used from the console\
+
+// Saves the current video source in the local storage
+let videoSrc = document.getElementById('myVideo').src;
+videoSrc = videoSrc.substring(videoSrc.indexOf('resources'));
+localStorage.setItem("currentVideoSrc", videoSrc);
 
 // Updates the currentTimeStamp variable based on the video playing
 let currentTimeStamp = "00.00";
@@ -35,20 +40,20 @@ document.getElementById("myVideo").addEventListener('timeupdate', function() {
 
     document.getElementById("timer").innerHTML = currentTimeStamp;
 
-    let urlParams = new URLSearchParams(window.location.search);
-    let videoSrc = urlParams.get('video');
-    getCheckpoints(videoSrc);
+    getCheckpoints(localStorage.getItem("currentVideoSrc"));
 });
 
 // Fetches the checkpoints from the data.json file and displays the checkpoint based on the timestamp
 function getCheckpoints(videoSrc) {
+    let videoFile;
+    let isWithinCheckpoint;
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             for (let i = 1; i <= Object.keys(data).length; i++) {
-                let videoFile = data['video' + i].file.replace('videos/', '');
+                videoFile = data['video' + i].file;
                 if (videoFile === videoSrc) {
-                    let isWithinCheckpoint = false; // flag to track if timestamp is within any checkpoint
+                    isWithinCheckpoint = false; // flag to track if timestamp is within any checkpoint
                     for (let j = 0; j <= Object.keys(data['video' + i].checkpoints).length - 1; j++) {
                         if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
                             isWithinCheckpoint = true;
@@ -81,21 +86,20 @@ function positionCheckpoint(horizontalOffsetRatio, verticalOffsetRatio) {
     checkpoint.style.top = checkpointTop + 'px';
 }
 
+// Variables for the checkpoint information
 const checkpoint = document.getElementById('checkpoint');
 const informationTitle = document.getElementById('information-title');
 const informationText = document.getElementById('information-text');
 const images = document.querySelectorAll('.image');
 const videoPreview = document.getElementById('video-preview');
 const mapImage = document.getElementById('map-image');
-
-
 const elementInformation = document.getElementsByClassName('scrollable-text-container')[0];
 const elementImageSlider = document.getElementsByClassName('slider')[0];
 const elementVideoBox = document.getElementsByClassName('video-box')[0];
 const elementLocation = document.getElementsByClassName('box-container-location')[0];
-
 const noDataIcons = document.querySelectorAll('.no-data');
 
+// Click on the checkpoint to display the information
 checkpoint.addEventListener('click', () => {
     noDataIcons.forEach(icon => {
         icon.style.display = icon.style.display === 'none' ? 'block' : 'none';
@@ -104,7 +108,38 @@ checkpoint.addEventListener('click', () => {
     elementImageSlider.style.display = elementImageSlider.style.display === 'none' ? 'flex' : 'none';
     elementVideoBox.style.display = elementVideoBox.style.display === 'none' ? 'flex' : 'none';
     elementLocation.style.display = elementLocation.style.display === 'none' ? 'flex' : 'none';
+
+    if (elementInformation.style.display === 'flex') {
+        getCheckpointData(localStorage.getItem("currentVideoSrc"));
+    }
 });
+
+// Fetches the checkpoint data from the data.json file and displays the information based on the checkpoint
+function getCheckpointData(videoSrc) {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            for (let i = 1; i <= Object.keys(data).length; i++) {
+                let videoFile = data['video' + i].file;
+                if (videoFile === videoSrc) {
+                    for (let j = 0; j <= Object.keys(data['video' + i].checkpoints).length - 1; j++) {
+                        if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
+                            informationTitle.innerHTML = data['video' + i].checkpoints[j].title;
+                            informationText.innerHTML = data['video' + i].checkpoints[j].text;
+                            videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].videoImage})`;
+                            mapImage.src = data['video' + i].checkpoints[j].mapLocation;
+                            images.forEach((image, index) => {
+                                image.src = data['video' + i].checkpoints[j].images[index];
+                            });
+                        }
+                    }
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
 
 
 //CSS functions
