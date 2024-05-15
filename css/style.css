@@ -116,6 +116,7 @@ main {
 
 .container-videoPlayer {
     min-width: 60%;
+    max-width: 60%;
     height: fit-content;
 }
 
@@ -183,11 +184,12 @@ main {
     display: flex;
     flex-direction: column;
     color: var(--white-color);
+    background-color: var(--primmary-color);
     font-family: SecondaryFont;
     font-size: 2rem;
     flex-grow: 1;
     --shadow-color: 197deg 32% 65%;
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px;
     box-shadow: 0 .5px .6px hsl(var(--shadow-color) / .36),
         0 1.7px 1.9px -.8px hsl(var(--shadow-color) / .36),
         0 4.3px 4.8px -1.7px hsl(var(--shadow-color) / .36),
@@ -231,6 +233,10 @@ main {
     height: calc(100% - 100px);
 }
 
+.section-loaction {
+    min-height: 290px;
+}
+
 .box-container-location img {
     object-fit: cover;
     border: 3px solid white;
@@ -254,6 +260,7 @@ main {
 
 .section-galeria {
     min-width: 60%;
+    min-height: 290px;
 }
 
 .slider {
@@ -370,7 +377,11 @@ main {
     text-align: center; 
 }
 
-.video-preview {
+.section-video-preview {
+    min-height: 290px;
+}
+
+#video-preview {
     position: relative;
     display: flex;
     justify-content: center;
@@ -385,11 +396,11 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-.video-preview:hover {
+#video-preview:hover {
     transform: scale(1.05);
 }
 
-.video-preview span:nth-child(1) {
+#video-preview span:nth-child(1) {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -397,7 +408,7 @@ main {
     border-radius: 5px;
 }
 
-.video-preview span:nth-child(2) {
+#video-preview span:nth-child(2) {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -406,7 +417,7 @@ main {
     background-color: white;
 }
 
-.video-preview span:nth-child(3) {
+#video-preview span:nth-child(3) {
     position: absolute;
     top: 50%;
     left: 51%;
@@ -495,7 +506,7 @@ footer h2 {
     height: 80px;
 }
 
-#interactable {
+#checkpoint {
     display: none;
     justify-content: center;
     align-items: center;
@@ -509,7 +520,7 @@ footer h2 {
     animation: interactibleAnimation 2s infinite ease-in-out;
 }
 
-#interactable span {
+#checkpoint span {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -528,8 +539,13 @@ footer h2 {
     }
 }
 
-#interactable span:active {
+#checkpoint span:active {
     background-color: var(--primmary-color);
+}
+
+.no-data {
+    max-width: 100px;
+    margin: auto;
 }
 
 @media(max-width: 1150px) {
@@ -537,8 +553,16 @@ footer h2 {
         flex-direction: column;
     }
 
+    .container-videoPlayer {
+        max-width: none;
+    }
+
     .container-bottom {
         flex-direction: column;
+    }
+
+    .dots-container {
+        bottom: 10px;
     }
 }
 
@@ -565,12 +589,12 @@ footer h2 {
         font-size: 1.5rem;
     }
 
-    .video-preview {
+    #video-preview {
         max-width: 80%;
         margin-bottom: 20px;
     }
 
-    .video-preview span:nth-child(3) {
+    #video-preview span:nth-child(3) {
         left: 50.5%;
         transform: translate(-50%, -50.5%);
     }
@@ -619,10 +643,6 @@ footer h2 {
         display: none;
     }
 
-    .dots-container {
-        bottom: 10px;
-    }
-
     footer h2 {
         font-size: 2rem;
         padding: 15px 20px 15px 20px;
@@ -640,11 +660,11 @@ footer h2 {
         margin: 10px 30px 10px 30px;
     }
     
-    .video-preview {
+    #video-preview {
         margin: 0 10px 10px 10px;
     }
     
-    .video-preview:hover {
+    #video-preview:hover {
         transform: scale(1.02);
     }
 

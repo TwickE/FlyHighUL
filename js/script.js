@@ -1,8 +1,17 @@
-// Change the second argument to your options:
+window.addEventListener('load', () => {
+    positionCheckpoint(0.4, 0.4);
+    resizeInformationWindow();
+});
+
+window.addEventListener('resize', () => {
+    positionCheckpoint(0.4, 0.4);
+    resizeInformationWindow();
+});
+
 // https://github.com/sampotts/plyr/#options
 const player = new Plyr('video', {
     controls: [
-        'play-large',
+        /* 'play-large', */
         'rewind',
         'play',
         'fast-forward',
@@ -13,10 +22,9 @@ const player = new Plyr('video', {
         'volume'
     ],
 });
+window.player = player; // Expose player so it can be used from the console
 
-// Expose player so it can be used from the console
-window.player = player;
-
+// Updates the currentTimeStamp variable based on the video playing
 let currentTimeStamp = "00.00";
 document.getElementById("myVideo").addEventListener('timeupdate', function() {
     let video = document.getElementById("myVideo");
@@ -32,23 +40,7 @@ document.getElementById("myVideo").addEventListener('timeupdate', function() {
     getCheckpoints(videoSrc);
 });
 
-window.addEventListener('load', () => {
-    // Get the current URL
-    let url = new URL(window.location.href);
-
-    // Get the current search parameters
-    let params = new URLSearchParams(url.search);
-
-    // Set a new parameter
-    params.set('video', 'video1.mp4');
-
-    // Update the search parameters of the URL
-    url.search = params.toString();
-
-    // Update the URL of the current page without reloading
-    history.pushState({}, '', url.toString());
-});
-
+// Fetches the checkpoints from the data.json file and displays the checkpoint based on the timestamp
 function getCheckpoints(videoSrc) {
     fetch('data.json')
         .then(response => response.json())
@@ -64,7 +56,7 @@ function getCheckpoints(videoSrc) {
                         }
                     }
                     // set the display based on whether timestamp is within any checkpoint
-                    document.getElementById("interactable").style.display = isWithinCheckpoint ? "flex" : "none";
+                    document.getElementById("checkpoint").style.display = isWithinCheckpoint ? "flex" : "none";
                 }
             }   
         })
@@ -73,43 +65,49 @@ function getCheckpoints(videoSrc) {
         });
 }
 
-
-
-
-
-
-window.addEventListener('load', () => {
-    positionCircle(0.4, 0.4);
-});
-
-window.addEventListener('resize', () => {
-    positionCircle(0.4, 0.4);
-});
-
-function positionCircle(horizontalOffsetRatio, verticalOffsetRatio) {
+// Positions the checkpoint on top of the video
+function positionCheckpoint(horizontalOffsetRatio, verticalOffsetRatio) {
     const video = document.getElementById('myVideo');
-    const circle = document.getElementById('interactable');
+    const checkpoint = document.getElementById('checkpoint');
 
     const videoRect = video.getBoundingClientRect();
-    const videoX = videoRect.left; // No need for adjustment, already relative to viewport
-    const videoY = videoRect.top; // No need for adjustment, already relative to viewport
+    const videoX = videoRect.left;
+    const videoY = videoRect.top;
 
-    // Calculate the left and top positions for the circle to be at the top-left corner of the video
-    let circleLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - 15;
-    let circleTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - 15;
+    let checkpointLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - 15;
+    let checkpointTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - 15;
 
-    circle.style.left = circleLeft + 'px';
-    circle.style.top = circleTop + 'px';
+    checkpoint.style.left = checkpointLeft + 'px';
+    checkpoint.style.top = checkpointTop + 'px';
 }
 
+const checkpoint = document.getElementById('checkpoint');
+const informationTitle = document.getElementById('information-title');
+const informationText = document.getElementById('information-text');
+const images = document.querySelectorAll('.image');
+const videoPreview = document.getElementById('video-preview');
+const mapImage = document.getElementById('map-image');
 
 
+const elementInformation = document.getElementsByClassName('scrollable-text-container')[0];
+const elementImageSlider = document.getElementsByClassName('slider')[0];
+const elementVideoBox = document.getElementsByClassName('video-box')[0];
+const elementLocation = document.getElementsByClassName('box-container-location')[0];
+
+const noDataIcons = document.querySelectorAll('.no-data');
+
+checkpoint.addEventListener('click', () => {
+    noDataIcons.forEach(icon => {
+        icon.style.display = icon.style.display === 'none' ? 'block' : 'none';
+    });
+    elementInformation.style.display = elementInformation.style.display === 'none' ? 'flex' : 'none';
+    elementImageSlider.style.display = elementImageSlider.style.display === 'none' ? 'flex' : 'none';
+    elementVideoBox.style.display = elementVideoBox.style.display === 'none' ? 'flex' : 'none';
+    elementLocation.style.display = elementLocation.style.display === 'none' ? 'flex' : 'none';
+});
 
 
-
-
-
-//Functions for CSS
+//CSS functions
 
 // Resize the information window based on the video player height
 function resizeInformationWindow() {
@@ -119,15 +117,6 @@ function resizeInformationWindow() {
     videoPlayerHeight = videoPlayerHeight.substring(0, videoPlayerHeight.length - 2);
     boxContainer.style.height = videoPlayerHeight - 60 + "px";
 }
-window.addEventListener('load', () => {
-    resizeInformationWindow();
-});
-
-window.addEventListener('resize', () => {
-    resizeInformationWindow();
-});
-
-
 
 // Image Slider functions
 const list = document.querySelector('.slider .list');
