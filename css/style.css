@@ -575,13 +575,6 @@ footer h2 {
 }
 
 @media(max-width: 750px) {
-    .box-container {
-        display: flex;
-        background-color: var(--primmary-color);
-        border-radius: 0 0 12px 12px;
-        min-height: 400px;
-    }
-
     .container-galeria-video {
         flex-direction: column;
     }

@@ -21,7 +21,22 @@
                 "video": "videos/video1.mp4"
             },
             {
-                
+                "start": "00.37",
+                "end": "00.50",
+                "positionX": "0.3",
+                "positionY": "0.3",
+                "title": "Bbbbbb",
+                "text": "Oiiii<br><br>oiiiii<br><br>oiiii",
+                "mapLocation": "",
+                "images": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "videoImage": "noVideo",
+                "video": ""
             }
         ]
     },

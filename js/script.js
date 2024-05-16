@@ -1,10 +1,9 @@
 window.addEventListener('load', () => {
-    positionCheckpoint(0.4, 0.4);
     resizeInformationWindow();
+    
 });
 
 window.addEventListener('resize', () => {
-    positionCheckpoint(0.4, 0.4);
     resizeInformationWindow();
 });
 
@@ -40,11 +39,11 @@ document.getElementById("myVideo").addEventListener('timeupdate', function() {
 
     document.getElementById("timer").innerHTML = currentTimeStamp;
 
-    getCheckpoints(localStorage.getItem("currentVideoSrc"));
+    showCheckpoints(localStorage.getItem("currentVideoSrc"));
 });
 
 // Fetches the checkpoints from the data.json file and displays the checkpoint based on the timestamp
-function getCheckpoints(videoSrc) {
+function showCheckpoints(videoSrc) {
     let videoFile;
     let isWithinCheckpoint;
     fetch('data.json')
@@ -57,6 +56,7 @@ function getCheckpoints(videoSrc) {
                     for (let j = 0; j <= Object.keys(data['video' + i].checkpoints).length - 1; j++) {
                         if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
                             isWithinCheckpoint = true;
+                            positionCheckpoint(data['video' + i].checkpoints[j].positionX, data['video' + i].checkpoints[j].positionY); // Positions the checkpoint
                             break; // exit the loop as soon as we find a matching checkpoint
                         }
                     }
@@ -101,15 +101,20 @@ const noDataIcons = document.querySelectorAll('.no-data');
 
 // Click on the checkpoint to display the information
 checkpoint.addEventListener('click', () => {
-    noDataIcons.forEach(icon => {
-        icon.style.display = icon.style.display === 'none' ? 'block' : 'none';
-    });
-    elementInformation.style.display = elementInformation.style.display === 'none' ? 'flex' : 'none';
-    elementImageSlider.style.display = elementImageSlider.style.display === 'none' ? 'flex' : 'none';
-    elementVideoBox.style.display = elementVideoBox.style.display === 'none' ? 'flex' : 'none';
-    elementLocation.style.display = elementLocation.style.display === 'none' ? 'flex' : 'none';
+    if (noDataIcons[0].style.display !== 'none')
+    {
+        noDataIcons.forEach(icon => {
+            icon.style.display = 'none';
+        });
 
-    if (elementInformation.style.display === 'flex') {
+        getCheckpointData(localStorage.getItem("currentVideoSrc"));
+
+        elementInformation.style.display = 'flex';
+        elementImageSlider.style.display = 'flex';
+        elementLocation.style.display = 'flex';
+    }
+    else
+    {
         getCheckpointData(localStorage.getItem("currentVideoSrc"));
     }
 });
@@ -126,7 +131,17 @@ function getCheckpointData(videoSrc) {
                         if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
                             informationTitle.innerHTML = data['video' + i].checkpoints[j].title;
                             informationText.innerHTML = data['video' + i].checkpoints[j].text;
-                            videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].videoImage})`;
+                            if(data['video' + i].checkpoints[j].videoImage === "noVideo")
+                            {
+                                noDataIcons[2].style.display = 'block';
+                                elementVideoBox.style.display = 'none';
+                            }
+                            else
+                            {
+                                noDataIcons[2].style.display = 'none';
+                                elementVideoBox.style.display = 'flex';
+                                videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].videoImage})`;
+                            }
                             mapImage.src = data['video' + i].checkpoints[j].mapLocation;
                             images.forEach((image, index) => {
                                 image.src = data['video' + i].checkpoints[j].images[index];
@@ -140,7 +155,6 @@ function getCheckpointData(videoSrc) {
             console.error('Error:', error);
         });
 }
-
 
 //CSS functions
 
