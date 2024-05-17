@@ -12,9 +12,9 @@
 </head>
 <body>
     <header>
-        <img src="resources/FlyHighUL_Logo.webp" alt="">
+        <img src="resources/FlyHighUL_Logo.svg" alt="">
         <div id="timer" style="color: white; font-size: 30px;">00.00</div>
-        <img src="resources/FCUL_Logo.webp" alt="">
+        <img src="resources/FCUL_Logo.svg" alt="">
     </header>
     <main>
         <div class="container-top">
@@ -23,17 +23,17 @@
                     <h2>Navegação Entre Vídeos</h2>
                     <!-- <div> -->
                         <button id="btn-videoRestart" class="btn-videoControlls">
-                            <img src="resources/replay.webp" alt="button to restart the first video">
+                            <img src="resources/replay.svg" alt="button to restart the first video">
                         </button>
                         <button id="btn-previousVideo" class="btn-videoControlls">
-                            <img src="resources/arrow.webp" alt="button to go back one video">
+                            <img src="resources/arrow.svg" alt="button to go back one video">
                         </button>
                         <button id="btn-nextVideo" class="btn-videoControlls">
-                            <img src="resources/arrow.webp" alt="button to go forward one video" style="transform: scaleX(-1);">
+                            <img src="resources/arrow.svg" alt="button to go forward one video" style="transform: scaleX(-1);">
                         </button>
                     <!-- </div> -->
                 </div>
-                <video id="myVideo" src="resources/videos/video1.mp4"></video>
+                <video id="myVideo" src="resources/videos/video1.mp4" controls playsinline></video>
             </section>
             <section class="section-box">
                 <div class="header-container">
@@ -74,10 +74,10 @@
                         </div>
                         <div class="buttons">
                             <button id="prev">
-                                <img src="resources/simpleArrow.webp" alt="Left Arrow Icon">
+                                <img src="resources/simpleArrow.svg" alt="Left Arrow Icon">
                             </button>
                             <button id="next">
-                                <img src="resources/simpleArrow.webp" alt="Right Arrow Icon" style="transform: scaleX(-1);">
+                                <img src="resources/simpleArrow.svg" alt="Right Arrow Icon" style="transform: scaleX(-1);">
                             </button>
                         </div>
                         <div class="dots-container">
@@ -112,7 +112,9 @@
                 </div>
                 <img class="no-data" src="resources/NoLocation.svg" alt="Icon representing no location information">
                 <div class="box-container-location" style="display: none;">
-                    <img id="map-image" src="" alt="">
+                    <a id="map-link" href="" target="_blank">
+                        <img id="map-image" src="" alt="">
+                    </a>
                 </div>
             </section>
         </div>
@@ -147,8 +149,8 @@
                 </div>
             </div>
             <div class="container-logos">
-                <img src="resources/FlyHighUL_Logo.webp" alt="">
-                <img src="resources/FCUL_Logo.webp" alt="">
+                <img src="resources/FlyHighUL_Logo.svg" alt="">
+                <img src="resources/FCUL_Logo.svg" alt="">
             </div>
         </div>
     </footer>

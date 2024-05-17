@@ -102,6 +102,14 @@ main {
     margin: 70px 30px;
 }
 
+video::-webkit-media-controls {
+    display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none;
+}
+
 .container-top {
     display: flex;
     flex-direction: row;
@@ -238,7 +246,12 @@ main {
     min-height: 290px;
 }
 
-.box-container-location img {
+.box-container-location > a {
+    display: flex;
+    justify-content: center;
+}
+
+.box-container-location > a > img {
     object-fit: cover;
     border: 3px solid white;
     border-radius: 12px;

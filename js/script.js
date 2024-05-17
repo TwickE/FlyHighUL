@@ -7,6 +7,11 @@ window.addEventListener('resize', () => {
     resizeInformationWindow();
 });
 
+var video11 = document.querySelector('video');
+video11.addEventListener('play', function() {
+    this.controls = false;
+});
+
 // https://github.com/sampotts/plyr/#options
 const player = new Plyr('video', {
     controls: [
@@ -93,6 +98,7 @@ const informationText = document.getElementById('information-text');
 const images = document.querySelectorAll('.image');
 const videoPreview = document.getElementById('video-preview');
 const mapImage = document.getElementById('map-image');
+const mapLink = document.getElementById('map-link');
 const elementInformation = document.getElementsByClassName('scrollable-text-container')[0];
 const elementImageSlider = document.getElementsByClassName('slider')[0];
 const elementVideoBox = document.getElementsByClassName('video-box')[0];
@@ -131,7 +137,7 @@ function getCheckpointData(videoSrc) {
                         if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
                             informationTitle.innerHTML = data['video' + i].checkpoints[j].title;
                             informationText.innerHTML = data['video' + i].checkpoints[j].text;
-                            if(data['video' + i].checkpoints[j].videoImage === "noVideo")
+                            if(data['video' + i].checkpoints[j].video[0] === "noVideo")
                             {
                                 noDataIcons[2].style.display = 'block';
                                 elementVideoBox.style.display = 'none';
@@ -140,11 +146,14 @@ function getCheckpointData(videoSrc) {
                             {
                                 noDataIcons[2].style.display = 'none';
                                 elementVideoBox.style.display = 'flex';
-                                videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].videoImage})`;
+                                videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].video[0]})`;
                             }
-                            mapImage.src = data['video' + i].checkpoints[j].mapLocation;
+                            mapImage.src = data['video' + i].checkpoints[j].mapLocation[0];
+                            mapImage.alt = data['video' + i].checkpoints[j].mapLocation[2];
+                            mapLink.href = data['video' + i].checkpoints[j].mapLocation[1];
                             images.forEach((image, index) => {
-                                image.src = data['video' + i].checkpoints[j].images[index];
+                                image.src = data['video' + i].checkpoints[j].images[index][0];
+                                image.alt = data['video' + i].checkpoints[j].images[index][1];
                             });
                         }
                     }
