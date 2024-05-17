@@ -34,13 +34,15 @@ videoSrc = videoSrc.substring(videoSrc.indexOf('resources'));
 localStorage.setItem("currentVideoSrc", videoSrc);
 
 // Updates the currentTimeStamp variable based on the video playing
-let currentTimeStamp = "00.00";
+let currentTimeStamp = "00.00000";
 document.getElementById("myVideo").addEventListener('timeupdate', function() {
     let video = document.getElementById("myVideo");
-    let hours = parseInt(video.currentTime / (60 * 60), 10);
-    let minutes = parseInt(video.currentTime / 60, 10).toString().padStart(2, '0');
-    let seconds = parseInt(video.currentTime % 60, 10).toString().padStart(2, '0');
-    currentTimeStamp = minutes + "." + seconds;
+    let rawMinutes = video.currentTime / 60;
+    let minutes = Math.floor(rawMinutes).toString().padStart(2, '0');
+    let rawSeconds = (rawMinutes * 60) % 60;
+    let seconds = Math.floor(rawSeconds).toString().padStart(2, '0');
+    let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
+    currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
 
     document.getElementById("timer").innerHTML = currentTimeStamp;
 
