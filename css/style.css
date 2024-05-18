@@ -562,6 +562,19 @@ footer h2 {
     margin: auto;
 }
 
+.smoth-transition {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.smoth-transition.activated {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
 @media(max-width: 1150px) {
     .container-top {
         flex-direction: column;

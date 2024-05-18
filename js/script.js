@@ -31,7 +31,6 @@ fetch('data.json')
         for (let i = 1; i <= Object.keys(data).length; i++) {
             dataMap.set(data['video' + i].file, data['video' + i]);
         }
-        console.log(dataMap);
     })
     .catch(error => {
         console.error('Error:', error);
@@ -127,6 +126,11 @@ checkpoint.addEventListener('click', () => {
         elementInformation.style.display = 'flex';
         elementImageSlider.style.display = 'flex';
         elementLocation.style.display = 'flex';
+        setTimeout(function() {
+            elementInformation.classList.add('activated');
+            elementImageSlider.classList.add('activated');
+            elementLocation.classList.add('activated');
+        }, 50);
     }
     else
     {
@@ -140,14 +144,35 @@ function getCheckpointData(videoSrc) {
     if (videoData) {
         for (let checkpoint of videoData.checkpoints) {
             if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
+                // Remove the 'activated' class to restart the transition
+                elementInformation.classList.remove('activated');
+                elementImageSlider.classList.remove('activated');
+                elementLocation.classList.remove('activated');
+                elementVideoBox.classList.remove('activated');
+
+                // Add a small delay before adding the 'activated' class again
+                setTimeout(function() {
+                    elementInformation.classList.add('activated');
+                    elementImageSlider.classList.add('activated');
+                    elementLocation.classList.add('activated');
+                    elementVideoBox.classList.add('activated');
+                }, 500);
+
                 informationTitle.innerHTML = checkpoint.title;
                 informationText.innerHTML = checkpoint.text;
+
                 if(checkpoint.video[0] === "noVideo") {
-                    noDataIcons[2].style.display = 'block';
-                    elementVideoBox.style.display = 'none';
+                    elementVideoBox.classList.remove('activated');
+                    setTimeout(function() {
+                        elementVideoBox.style.display = 'none';
+                        noDataIcons[2].style.display = 'block';
+                    }, 500);
                 } else {
                     noDataIcons[2].style.display = 'none';
                     elementVideoBox.style.display = 'flex';
+                    setTimeout(function() {
+                        elementVideoBox.classList.add('activated');
+                    }, 500);
                     videoPreview.style.backgroundImage = `url(${checkpoint.video[0]})`;
                 }
                 mapImage.src = checkpoint.mapLocation[0];

@@ -17,7 +17,7 @@
                     ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
                     ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["resources/buildings/FCUL_C6_image1.png", "resources/videos/video2.mp4"]
             },
             {
                 "start": "00.16916",
@@ -34,7 +34,7 @@
                     ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
                     ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", "videos/video1.mp4"]
             },
             {
                 "start": "00.21809",
@@ -195,24 +195,21 @@
         "file": "resources/videos/video2.mp4",
         "checkpoints": [
             {
-                "start": "00.23",
-                "end": "00.34",
-                "positionX": "0",
-                "positionY": "0",
-                "title": "Faculdade de Ciências Edifício - C6",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o",
-                "mapLocation": "resources/location/FCUL-06.png",
-                "imagens": [
-                    "resources/images/FCUL-06.png",
-                    "resources/images/FCUL-06.png",
-                    "resources/images/FCUL-06.png",
-                    "resources/images/FCUL-06.png",
-                    "resources/images/FCUL-06.png"
+                "start": "00.13169",
+                "end": "00.16182",
+                "positionX": "0.30",
+                "positionY": "0.70",
+                "title": "Teste Video 2",
+                "text": "Teste video 2",
+                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "images": [
+                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
+                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
+                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
+                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
+                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
                 ],
-                "video": "videos/video1.mp4"
-            },
-            {
-                
+                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
             }
         ]
     }
