@@ -1,13 +1,3 @@
-window.addEventListener('load', () => {
-    resizeInformationWindow();
-    
-});
-
-window.addEventListener('resize', () => {
-    resizeInformationWindow();
-});
-
-// https://github.com/sampotts/plyr/#options
 const player = new Plyr('video', {
     controls: [
         'play-large',
@@ -86,14 +76,16 @@ function showCheckpoints(videoSrc) {
 // Positions the checkpoint on top of the video
 function positionCheckpoint(horizontalOffsetRatio, verticalOffsetRatio) {
     const video = document.getElementById('myVideo');
-    const checkpoint = document.getElementById('checkpoint');
 
     const videoRect = video.getBoundingClientRect();
     const videoX = videoRect.left;
     const videoY = videoRect.top;
 
-    let checkpointLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - 15;
-    let checkpointTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - 15;
+    let adjustment = 0;
+    adjustment = window.innerWidth <= 650 ? 11 : 15;
+
+    let checkpointLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - adjustment;
+    let checkpointTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - adjustment;
 
     checkpoint.style.left = checkpointLeft + 'px';
     checkpoint.style.top = checkpointTop + 'px';
@@ -174,6 +166,7 @@ function getCheckpointData(videoSrc) {
                         elementVideoBox.classList.add('activated');
                     }, 500);
                     videoPreview.style.backgroundImage = `url(${checkpoint.video[0]})`;
+                    videoPreview.src = checkpoint.video[1];
                 }
                 mapImage.src = checkpoint.mapLocation[0];
                 mapImage.alt = checkpoint.mapLocation[2];
@@ -188,7 +181,42 @@ function getCheckpointData(videoSrc) {
     }
 }
 
+// Click on the video preview to navigate to other video
+videoPreview.addEventListener('click', () => {
+    myVideo.src = videoPreview.src;
+    videoSrc = videoPreview.src;
+    localStorage.setItem("currentVideoSrc", videoSrc);
+    console.log(videoSrc);
+    checkpoint.style.display = 'none';
+
+    // Start the transition to opacity: 0 and visibility: hidden
+    elementInformation.classList.remove('activated');
+    elementImageSlider.classList.remove('activated');
+    elementLocation.classList.remove('activated');
+    elementVideoBox.classList.remove('activated');
+
+    // After the transition is complete, set display to none
+    setTimeout(function() {
+        elementInformation.style.display = 'none';
+        elementImageSlider.style.display = 'none';
+        elementLocation.style.display = 'none';
+        elementVideoBox.style.display = 'none';
+        noDataIcons.forEach(icon => {
+            icon.style.display = '';
+        });
+    }, 500); // delay should match the transition duration
+
+    player.play();
+});
+
 //CSS functions
+window.addEventListener('load', () => {
+    resizeInformationWindow();
+});
+
+window.addEventListener('resize', () => {
+    resizeInformationWindow();
+});
 
 // Resize the information window based on the video player height
 function resizeInformationWindow() {
