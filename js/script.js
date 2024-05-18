@@ -7,15 +7,10 @@ window.addEventListener('resize', () => {
     resizeInformationWindow();
 });
 
-var video11 = document.querySelector('video');
-video11.addEventListener('play', function() {
-    this.controls = false;
-});
-
 // https://github.com/sampotts/plyr/#options
 const player = new Plyr('video', {
     controls: [
-        /* 'play-large', */
+        'play-large',
         'rewind',
         'play',
         'fast-forward',

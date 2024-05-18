@@ -654,6 +654,16 @@ footer h2 {
         font-size: 2rem;
         padding: 15px 20px 15px 20px;
     }
+
+    #checkpoint {
+        width: 22px;
+        height: 22px;
+    }
+    
+    #checkpoint span {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 @media(max-width: 500px) {
