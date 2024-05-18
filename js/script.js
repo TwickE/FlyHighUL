@@ -26,7 +26,21 @@ const player = new Plyr('video', {
         'volume'
     ],
 });
-window.player = player; // Expose player so it can be used from the console\
+window.player = player; // Expose player so it can be used from the console
+
+let dataMap = new Map();
+// Fetch the data once and store it in a map
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        for (let i = 1; i <= Object.keys(data).length; i++) {
+            dataMap.set(data['video' + i].file, data['video' + i]);
+        }
+        console.log(dataMap);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 
 // Saves the current video source in the local storage
 let videoSrc = document.getElementById('myVideo').src;
@@ -35,46 +49,44 @@ localStorage.setItem("currentVideoSrc", videoSrc);
 
 // Updates the currentTimeStamp variable based on the video playing
 let currentTimeStamp = "00.00000";
-document.getElementById("myVideo").addEventListener('timeupdate', function() {
-    let video = document.getElementById("myVideo");
-    let rawMinutes = video.currentTime / 60;
-    let minutes = Math.floor(rawMinutes).toString().padStart(2, '0');
-    let rawSeconds = (rawMinutes * 60) % 60;
-    let seconds = Math.floor(rawSeconds).toString().padStart(2, '0');
-    let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
-    currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
+let videoContent = document.getElementById("myVideo");
+let intervalId;
 
-    document.getElementById("timer").innerHTML = currentTimeStamp;
+// Updates the currentTimeStamp variable every 100ms while the video is playing
+videoContent.addEventListener('play', function() {
+    intervalId = setInterval(function() {
+        let rawMinutes = videoContent.currentTime / 60;
+        let minutes = Math.floor(rawMinutes).toString().padStart(2, '0');
+        let rawSeconds = (rawMinutes * 60) % 60;
+        let seconds = Math.floor(rawSeconds).toString().padStart(2, '0');
+        let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
+        currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
 
-    showCheckpoints(localStorage.getItem("currentVideoSrc"));
+        document.getElementById("timer").innerHTML = currentTimeStamp;
+
+        showCheckpoints(localStorage.getItem("currentVideoSrc"));
+    }, 100);
 });
 
-// Fetches the checkpoints from the data.json file and displays the checkpoint based on the timestamp
+// Stops the interval when the video is paused
+videoContent.addEventListener('pause', function() {
+    clearInterval(intervalId);
+});
+
+// Fetches the checkpoints from the dataMap and displays them on the video
 function showCheckpoints(videoSrc) {
-    let videoFile;
-    let isWithinCheckpoint;
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            for (let i = 1; i <= Object.keys(data).length; i++) {
-                videoFile = data['video' + i].file;
-                if (videoFile === videoSrc) {
-                    isWithinCheckpoint = false; // flag to track if timestamp is within any checkpoint
-                    for (let j = 0; j <= Object.keys(data['video' + i].checkpoints).length - 1; j++) {
-                        if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
-                            isWithinCheckpoint = true;
-                            positionCheckpoint(data['video' + i].checkpoints[j].positionX, data['video' + i].checkpoints[j].positionY); // Positions the checkpoint
-                            break; // exit the loop as soon as we find a matching checkpoint
-                        }
-                    }
-                    // set the display based on whether timestamp is within any checkpoint
-                    document.getElementById("checkpoint").style.display = isWithinCheckpoint ? "flex" : "none";
-                }
-            }   
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+    let videoData = dataMap.get(videoSrc);
+    if (videoData) {
+        let isWithinCheckpoint = false;
+        for (let checkpoint of videoData.checkpoints) {
+            if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
+                isWithinCheckpoint = true;
+                positionCheckpoint(checkpoint.positionX, checkpoint.positionY);
+                break;
+            }
+        }
+        document.getElementById("checkpoint").style.display = isWithinCheckpoint ? "flex" : "none";
+    }
 }
 
 // Positions the checkpoint on top of the video
@@ -127,44 +139,33 @@ checkpoint.addEventListener('click', () => {
     }
 });
 
-// Fetches the checkpoint data from the data.json file and displays the information based on the checkpoint
+// Fetches the checkpoint data from the dataMap and displays it
 function getCheckpointData(videoSrc) {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            for (let i = 1; i <= Object.keys(data).length; i++) {
-                let videoFile = data['video' + i].file;
-                if (videoFile === videoSrc) {
-                    for (let j = 0; j <= Object.keys(data['video' + i].checkpoints).length - 1; j++) {
-                        if (currentTimeStamp >= data['video' + i].checkpoints[j].start && currentTimeStamp <= data['video' + i].checkpoints[j].end) {
-                            informationTitle.innerHTML = data['video' + i].checkpoints[j].title;
-                            informationText.innerHTML = data['video' + i].checkpoints[j].text;
-                            if(data['video' + i].checkpoints[j].video[0] === "noVideo")
-                            {
-                                noDataIcons[2].style.display = 'block';
-                                elementVideoBox.style.display = 'none';
-                            }
-                            else
-                            {
-                                noDataIcons[2].style.display = 'none';
-                                elementVideoBox.style.display = 'flex';
-                                videoPreview.style.backgroundImage = `url(${data['video' + i].checkpoints[j].video[0]})`;
-                            }
-                            mapImage.src = data['video' + i].checkpoints[j].mapLocation[0];
-                            mapImage.alt = data['video' + i].checkpoints[j].mapLocation[2];
-                            mapLink.href = data['video' + i].checkpoints[j].mapLocation[1];
-                            images.forEach((image, index) => {
-                                image.src = data['video' + i].checkpoints[j].images[index][0];
-                                image.alt = data['video' + i].checkpoints[j].images[index][1];
-                            });
-                        }
-                    }
+    let videoData = dataMap.get(videoSrc);
+    if (videoData) {
+        for (let checkpoint of videoData.checkpoints) {
+            if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
+                informationTitle.innerHTML = checkpoint.title;
+                informationText.innerHTML = checkpoint.text;
+                if(checkpoint.video[0] === "noVideo") {
+                    noDataIcons[2].style.display = 'block';
+                    elementVideoBox.style.display = 'none';
+                } else {
+                    noDataIcons[2].style.display = 'none';
+                    elementVideoBox.style.display = 'flex';
+                    videoPreview.style.backgroundImage = `url(${checkpoint.video[0]})`;
                 }
+                mapImage.src = checkpoint.mapLocation[0];
+                mapImage.alt = checkpoint.mapLocation[2];
+                mapLink.href = checkpoint.mapLocation[1];
+                images.forEach((image, index) => {
+                    image.src = checkpoint.images[index][0];
+                    image.alt = checkpoint.images[index][1];
+                });
+                break;
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        }
+    }
 }
 
 //CSS functions

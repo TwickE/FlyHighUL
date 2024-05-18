@@ -192,7 +192,7 @@
         ]
     },
     "video2": {
-        "file": "videos/video1.mp4",
+        "file": "resources/videos/video2.mp4",
         "checkpoints": [
             {
                 "start": "00.23",
