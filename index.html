@@ -18,30 +18,28 @@
     </header>
     <main>
         <div class="container-top">
-            <section class="container-videoPlayer">
+            <section class="container-videoPlayer animate__animated animate__backInLeft">
                 <div class="container-videoNavigation">
                     <h2>Navegação Entre Vídeos</h2>
-                    <!-- <div> -->
-                        <button id="btn-videoRestart" class="btn-videoControlls">
-                            <img src="resources/replay.svg" alt="button to restart the first video">
-                        </button>
-                        <button id="btn-previousVideo" class="btn-videoControlls">
-                            <img src="resources/arrow.svg" alt="button to go back one video">
-                        </button>
-                        <button id="btn-nextVideo" class="btn-videoControlls">
-                            <img src="resources/arrow.svg" alt="button to go forward one video" style="transform: scaleX(-1);">
-                        </button>
-                    <!-- </div> -->
+                    <button id="btn-videoRestart" class="btn-videoControlls" title="Recomeçar o primeiro vídeo">
+                        <img src="resources/replay.svg" alt="recomeçar o primeiro vídeo">
+                    </button>
+                    <button id="btn-previousVideo" class="btn-videoControlls" title="Navegar para o video anterior">
+                        <img src="resources/arrow.svg" alt="navegar para o video anterior">
+                    </button>
+                    <button id="btn-nextVideo" class="btn-videoControlls" title="Navegar para o próximo vídeo">
+                        <img src="resources/arrow.svg" alt="navegar para o próximo vídeo" style="transform: scaleX(-1);">
+                    </button>
                 </div>
                 <video id="myVideo" src="resources/videos/video1.mp4" poster="resources/videos/video1Poster.png" controls playsinline></video>
             </section>
-            <section class="section-box">
+            <section class="section-box animate__animated animate__backInRight">
                 <div class="header-container">
                     <h2 id="information-title">Informações</h2>
                 </div>
                 <div class="box-container">
-                    <img class="no-data" src="resources/NoInformation.svg" alt="Icon representing no information available">
-                    <div class="scrollable-text-container smoth-transition">
+                    <img class="no-data animate__animated animate__fadeIn" src="resources/NoInformation.svg" alt="Icon representing no information available">
+                    <div class="scrollable-text-container animate__animated animate__fadeIn" style="display: none;">
                         <p id="information-text"></p>
                     </div>
                 </div>
@@ -49,12 +47,12 @@
         </div>
         <div class="container-bottom">
             <div class="container-galeria-video">
-                <section class="section-box section-galeria">
+                <section class="section-box section-galeria animate__animated animate__backInUp">
                     <div class="header-container">
                         <h2>Galeria</h2>
                     </div>
-                    <img class="no-data" src="resources/NoImages.svg" alt="Icon representing no images in the gallery">
-                    <div class="slider smoth-transition">
+                    <img class="no-data animate__animated animate__fadeIn" src="resources/NoImages.svg" alt="Icon representing no images in the gallery">
+                    <div class="slider animate__animated animate__fadeIn" style="display: none;">
                         <div class="list">
                             <div class="item">
                                 <img class="image" src="" alt="Slider Image 1">
@@ -91,12 +89,12 @@
                         </div>
                     </div>
                 </section>
-                <section class="section-box section-video-preview">
+                <section class="section-box section-video-preview  animate__animated animate__backInUp">
                     <div class="header-container">
                         <h2>Vídeo</h2>
                     </div>
-                    <img class="no-data" src="resources/NoVideo.svg" alt="Icon representing no video to navigate to">
-                    <div class="video-box smoth-transition">
+                    <img class="no-data animate__animated animate__fadeIn" src="resources/NoVideo.svg" alt="Icon representing no video to navigate to">
+                    <div class="video-box animate__animated animate__fadeIn" style="display: none;">
                         <h3>Clique para navegar para este vídeo</h3>
                         <a src="" id="video-preview">
                             <span></span>
@@ -106,12 +104,12 @@
                     </div>
                 </section>
             </div>
-            <section class="section-box section-loaction">
+            <section class="section-box section-loaction animate__animated animate__backInUp">
                 <div class="header-container">
                     <h2>Localização</h2>
                 </div>
-                <img class="no-data" src="resources/NoLocation.svg" alt="Icon representing no location information">
-                <div class="box-container-location smoth-transition">
+                <img class="no-data animate__animated animate__fadeIn" src="resources/NoLocation.svg" alt="Icon representing no location information">
+                <div class="box-container-location animate__animated animate__fadeIn" style="display: none;">
                     <a id="map-link" href="" target="_blank">
                         <img id="map-image" src="" alt="">
                     </a>

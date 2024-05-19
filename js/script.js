@@ -30,6 +30,7 @@ fetch('data.json')
 let videoSrc = document.getElementById('myVideo').src;
 videoSrc = videoSrc.substring(videoSrc.indexOf('resources'));
 localStorage.setItem("currentVideoSrc", videoSrc);
+localStorage.setItem("videoSrcHistory", JSON.stringify([videoSrc]));
 
 // Updates the currentTimeStamp variable based on the video playing
 let currentTimeStamp = "00.00000";
@@ -112,62 +113,23 @@ checkpoint.addEventListener('click', () => {
         noDataIcons.forEach(icon => {
             icon.style.display = 'none';
         });
-
-        getCheckpointData(localStorage.getItem("currentVideoSrc"));
-
-        elementInformation.style.display = 'flex';
-        elementImageSlider.style.display = 'flex';
-        elementLocation.style.display = 'flex';
-        setTimeout(function() {
-            elementInformation.classList.add('activated');
-            elementImageSlider.classList.add('activated');
-            elementLocation.classList.add('activated');
-        }, 50);
     }
-    else
-    {
-        getCheckpointData(localStorage.getItem("currentVideoSrc"));
-    }
+    getCheckpointData(localStorage.getItem("currentVideoSrc"));
 });
 
-// Fetches the checkpoint data from the dataMap and displays it
+// Fetches the checkpoint data from the dataMap
 function getCheckpointData(videoSrc) {
     let videoData = dataMap.get(videoSrc);
     if (videoData) {
         for (let checkpoint of videoData.checkpoints) {
             if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
-                // Remove the 'activated' class to restart the transition
-                elementInformation.classList.remove('activated');
-                elementImageSlider.classList.remove('activated');
-                elementLocation.classList.remove('activated');
-                elementVideoBox.classList.remove('activated');
-
-                // Add a small delay before adding the 'activated' class again
-                setTimeout(function() {
-                    elementInformation.classList.add('activated');
-                    elementImageSlider.classList.add('activated');
-                    elementLocation.classList.add('activated');
-                    elementVideoBox.classList.add('activated');
-                }, 500);
+                elementInformation.style.display = 'none';
+                elementImageSlider.style.display = 'none';
+                elementLocation.style.display = 'none';
+                elementVideoBox.style.display = 'none';
 
                 informationTitle.innerHTML = checkpoint.title;
                 informationText.innerHTML = checkpoint.text;
-
-                if(checkpoint.video[0] === "noVideo") {
-                    elementVideoBox.classList.remove('activated');
-                    setTimeout(function() {
-                        elementVideoBox.style.display = 'none';
-                        noDataIcons[2].style.display = 'block';
-                    }, 500);
-                } else {
-                    noDataIcons[2].style.display = 'none';
-                    elementVideoBox.style.display = 'flex';
-                    setTimeout(function() {
-                        elementVideoBox.classList.add('activated');
-                    }, 500);
-                    videoPreview.style.backgroundImage = `url(${checkpoint.video[0]})`;
-                    videoPreview.src = checkpoint.video[1];
-                }
                 mapImage.src = checkpoint.mapLocation[0];
                 mapImage.alt = checkpoint.mapLocation[2];
                 mapLink.href = checkpoint.mapLocation[1];
@@ -175,38 +137,110 @@ function getCheckpointData(videoSrc) {
                     image.src = checkpoint.images[index][0];
                     image.alt = checkpoint.images[index][1];
                 });
-                break;
+
+                let loadedImagesCount = 0;
+                images.forEach((image) => {
+                    image.onload = function() {
+                        loadedImagesCount++;
+                        if (loadedImagesCount === images.length) {
+                            // All images have loaded, now display the elements
+                            displayElements(checkpoint);
+                        }
+                    };
+                });
             }
         }
     }
 }
 
+// Displays the elements based on the checkpoint data
+function displayElements(checkpoint) {
+    if(checkpoint.video[0] === "noVideo") {
+        elementInformation.style.display = 'flex';
+        elementImageSlider.style.display = 'flex';
+        elementLocation.style.display = 'flex';
+        elementVideoBox.style.display = 'none';
+        noDataIcons[2].style.display = 'block';
+    } else {
+        let backgroundImage = new Image();
+        backgroundImage.src = checkpoint.video[0];
+        backgroundImage.onload = function() {
+            videoPreview.style.backgroundImage = `url(${checkpoint.video[0]})`;
+            videoPreview.src = checkpoint.video[1];
+            elementInformation.style.display = 'flex';
+            elementImageSlider.style.display = 'flex';
+            elementLocation.style.display = 'flex';
+            elementVideoBox.style.display = 'flex';
+            noDataIcons[2].style.display = 'none';
+        }
+    }
+}
+
+// Resets the video and information elements
+function restartVideo() {
+    checkpoint.style.display = 'none';
+    elementInformation.style.display = 'none';
+    elementImageSlider.style.display = 'none';
+    elementLocation.style.display = 'none';
+    elementVideoBox.style.display = 'none';
+
+    noDataIcons.forEach(icon => {
+        icon.style.display = '';
+    });
+}
+
 // Click on the video preview to navigate to other video
 videoPreview.addEventListener('click', () => {
+    restartVideo();
     myVideo.src = videoPreview.src;
     videoSrc = videoPreview.src;
     localStorage.setItem("currentVideoSrc", videoSrc);
-    console.log(videoSrc);
-    checkpoint.style.display = 'none';
 
-    // Start the transition to opacity: 0 and visibility: hidden
-    elementInformation.classList.remove('activated');
-    elementImageSlider.classList.remove('activated');
-    elementLocation.classList.remove('activated');
-    elementVideoBox.classList.remove('activated');
-
-    // After the transition is complete, set display to none
-    setTimeout(function() {
-        elementInformation.style.display = 'none';
-        elementImageSlider.style.display = 'none';
-        elementLocation.style.display = 'none';
-        elementVideoBox.style.display = 'none';
-        noDataIcons.forEach(icon => {
-            icon.style.display = '';
-        });
-    }, 500); // delay should match the transition duration
+    let localStorageArray = JSON.parse(localStorage.getItem("videoSrcHistory"));
+    localStorageArray.push(videoSrc);
+    localStorage.setItem("videoSrcHistory", JSON.stringify(localStorageArray));
 
     player.play();
+});
+
+// Restart the video and update the local storage
+const btnRestartVideo = document.getElementById('btn-videoRestart');
+btnRestartVideo.addEventListener('click', () => {
+    restartVideo();
+    myVideo.src = "resources/videos/video1.mp4"
+    localStorage.setItem("currentVideoSrc", "resources/videos/video1.mp4");
+    localStorage.setItem("videoSrcHistory", JSON.stringify(["resources/videos/video1.mp4"]));
+    localStorage.setItem("videoSrcHistoryIndex", "0");
+});
+
+// Navigate to the previous video in the history
+const btnPreviousVideo = document.getElementById('btn-previousVideo');
+btnPreviousVideo.addEventListener('click', () => {
+    let localStorageArray = JSON.parse(localStorage.getItem("videoSrcHistory"));
+    let index = parseInt(localStorage.getItem("videoSrcHistoryIndex"));
+    if (index > 0) {
+        index--;
+        let previousVideoSrc = localStorageArray[index];
+        restartVideo();
+        myVideo.src = previousVideoSrc;
+        localStorage.setItem("currentVideoSrc", previousVideoSrc);
+        localStorage.setItem("videoSrcHistoryIndex", index.toString());
+    }
+});
+
+// Navigate to the next video in the history
+const btnNextVideo = document.getElementById('btn-nextVideo');
+btnNextVideo.addEventListener('click', () => {
+    let localStorageArray = JSON.parse(localStorage.getItem("videoSrcHistory"));
+    let index = parseInt(localStorage.getItem("videoSrcHistoryIndex"));
+    if (index < localStorageArray.length - 1) {
+        index++;
+        let nextVideoSrc = localStorageArray[index];
+        restartVideo();
+        myVideo.src = nextVideoSrc;
+        localStorage.setItem("currentVideoSrc", nextVideoSrc);
+        localStorage.setItem("videoSrcHistoryIndex", index.toString());
+    }
 });
 
 //CSS functions
