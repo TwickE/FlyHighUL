@@ -8,16 +8,16 @@
                 "positionX": "0.30",
                 "positionY": "0.70",
                 "title": "Reitoria",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "Traduzindo uma arquitetura civil educativa do séc. XX, o edifício da Reitoria, inaugurado em dezembro de 1961, apresenta planta composta resultante da articulação de dois corpos funcionalmente diferenciados, um de planta retangular destinado aos serviços académicos,e outro de planta em leque, a Aula Magna, correspondente à sala destinada às sessões académicas e a atividades associadas às artes do espetáculo.<br><br>Desenvolvido em três pisos, com cobertura em terraço, apresenta fachadas principais destacadas por pórticos sem entablamento e composição geral baseada na simetria e regularidade dos seus elementos, num jogo de formas e volumes.<br><br>Integra um conjunto de grande monumentalidade, constituído por massas lisas, singelas, harmoniosamente proporcionadas e relacionadas no espaço, representando um dos principais exemplos da primeira fase 'Internacionalista' do modernismo português na arquitetura.<br><br>Merecem referência, além do traçado arquitetónico, diversas obras de arte que enriquecem o edifício, tanto no interior como no exterior, destacando-se nomes de artistas como Almada Negreiros (desenhos incisos nas fachadas), Fred Kradolfer (azulejos da fachada), Lino António (pintura da porta da Aula Magna e vitrais do vestíbulo este), Querubim Lapa (painel cerâmico do vestíbulo da Aula Magna), Rogério Ribeiro (tapeçaria),entre outros.",
+                "mapLocation": ["resources/locations/reitoria.webp", "https://maps.app.goo.gl/jEoFeG3vPa7zzTH87", "Mapa da localização da Reitoria"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/reitoria_image1.webp", "Imagem 1 da Reitoria"],
+                    ["resources/buildings/reitoria_image2.webp", "Imagem 2 da Reitoria"],
+                    ["resources/buildings/reitoria_image3.webp", "Imagem 3 da Reitoria"],
+                    ["resources/buildings/reitoria_image4.webp", "Imagem 4 da Reitoria"],
+                    ["resources/buildings/reitoria_image5.webp", "Imagem 5 da Reitoria"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "resources/videos/video2.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.16916",
@@ -25,14 +25,14 @@
                 "positionX": "0.60",
                 "positionY": "0.50",
                 "title": "Faculdade de Direito",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "A Faculdade de Direito da Universidade de Lisboa (FDUL) é uma instituição de ensino público universitário dedicada ao ensino do Direito.<br><br>O único curso de licenciatura (1.º ciclo de Bolonha) da faculdade é a licenciatura em Direito. Existem, contudo, inúmeros programas de pós-graduações, mestrados e doutoramentos que podem variar de ano para ano.<br><br>Está sediada na Cidade Universitária de Lisboa, na Alameda da Universidade, perto da Reitoria, em frente à Faculdade de Letras e ao lado da Faculdade de Psicologia e de Ciências da Educação.<br><br>O edifício principal da FDUL trata-se de um conjunto arquitetónico de interesse nacional, projetado pelos arquitetos Porfírio Pardal Monteiro e António Pardal Monteiro, marcado pela monumentalidade de inspiração clássica, e em que cada um corpos fundadores da Cidade Universitária “incorpora um programa artístico específico e muito variado, da autoria de nomes como Daciano da Costa, Almada Negreiros, Leopoldo de Almeida, Lino António, Jorge Barradas, Rogério Ribeiro, Querubim Lapa, Barata Feyo, Martins Correia ou José Farinha, entre outros, cuja harmonização com as soluções arquitetónicas e de engenharia assume plenamente o conceito de «obra total»”.<br><br>A Faculdade congratula-se por esta distinção – atribuída a bens em função do respetivo caracter matricial, do génio do respetivo criador, do seu interesse como testemunho notável de vivências e factos históricos, do seu valor estético, técnico e material intrínseco, da sua conceção arquitetónica, urbanística e paisagística – e orgulha-se de que o seu património seja reconhecido como um marco da memória coletiva nacional.",
+                "mapLocation": ["resources/locations/faculdade_direito.webp", "https://maps.app.goo.gl/EEcscpbrqsdTUTgD9", "Mapa da localização da Faculdade de Direito"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/faculdade_direito_image1.webp", "Imagem 1 da Faculdade de Direito"],
+                    ["resources/buildings/faculdade_direito_image2.webp", "Imagem 2 da Faculdade de Direito"],
+                    ["resources/buildings/faculdade_direito_image3.webp", "Imagem 3 da Faculdade de Direito"],
+                    ["resources/buildings/faculdade_direito_image4.webp", "Imagem 4 da Faculdade de Direito"],
+                    ["resources/buildings/faculdade_direito_image5.webp", "Imagem 5 da Faculdade de Direito"]
                 ],
                 "video": ["noVideo", ""]
             },
@@ -42,16 +42,16 @@
                 "positionX": "0.22",
                 "positionY": "0.76",
                 "title": "Faculdade de Letras",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "A Faculdade de Letras é a terceira maior das dezoito escolas da Universidade de Lisboa. Adquiriu a actual designação em 1911, quando sucedeu ao Curso Superior de Letras, criado em 1859 a partir de um fundo doado pelo Rei D. Pedro V.  O seu ensino e investigação centrou-se sempre nas principais áreas das humanidades, a que hoje chamamos estudos literários, filosofia, história e linguística. Ao longo do tempo essas áreas foram frequentemente reconfiguradas, de modo a incluir novos tópicos de desenvolvimento e interesse.<br><br>O actual edifício da Faculdade de Letras da Universidade de Lisboa é da autoria do arquitecto Porfírio Pardal Monteiro, tendo o seu sobrinho, António Pardal Monteiro, sido o responsável pela conclusão do projecto. O edifício da FLUL insere-se num complexo que engloba também os edifícios da Faculdade de Direito e da Reitoria. A arquitectura destes três edifícios é pautada pela simetria, evidente desde o pórtico de mármore, constituido por um rectângulo bem proporcionado e adornado com coloridas pinturas de José de Almada Negreiros. Este, retratou figuras literárias não só da Bíblia como de Prometeu Agrilhoado (Ésquilo), da Divina Comédia (Dante), de Hamlet (Shakespeare), de D. Quixote (Cervantes), de Os Maias (Eça de Queiroz), entre outros.",
+                "mapLocation": ["resources/locations/faculdade_letras.webp", "https://maps.app.goo.gl/JDXkYqsCyHuzxRAi6", "Mapa da localização da Faculdade de Letras"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/faculdade_letras_image1.webp", "Imagem 1 da Faculdade de Letras"],
+                    ["resources/buildings/faculdade_letras_image2.webp", "Imagem 2 da Faculdade de Letras"],
+                    ["resources/buildings/faculdade_letras_image3.webp", "Imagem 3 da Faculdade de Letras"],
+                    ["resources/buildings/faculdade_letras_image4.webp", "Imagem 4 da Faculdade de Letras"],
+                    ["resources/buildings/faculdade_letras_image5.webp", "Imagem 5 da Faculdade de Letras"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.26390",
@@ -59,16 +59,16 @@
                 "positionX": "0.42",
                 "positionY": "0.45",
                 "title": "Faculdade de Psicologia",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "A Faculdade de Psicologia e Ciências da Educação da Universidade de Lisboa (FPCE-UL) foi uma extinta unidade orgânica da Universidade de Lisboa (1911-2013).<br><br> Até inícios dos anos 80 do século XX, o ensino da psicologia era ministrado nas Faculdades de Letras das três universidades clássicas do país (Coimbra, Lisboa e Porto), no âmbito dos cursos de filosofia. Após o 25 de Abril, a psicologia foi autonomizada da filosofia, criando-se os respetivos cursos nas Faculdades de Letras do país (1977). Por fim, em 1980, através do decreto-lei n.º 529/80, eram criadas nas três universidades Faculdades de Psicologia e Ciências da Educação, resultantes da autonomização daqueles cursos. No final dos anos 80 foi dotada de um edifício próprio, na na Alameda da Universidade (Cidade Universitária), a nascente da Faculdade de Direito.<br><br>A Faculdade de Psicologia e Ciências da Educação existiu durante quase trinta anos, tendo sido declarada extinta em 31 de Dezembro de 2009, na sequência da aprovação dos novos Estatutos da Universidade de Lisboa, que criaram em seu lugar duas novas unidades orgânicas: a Faculdade de Psicologia e o Instituto de Educação, muito embora continuem a partilhar o mesmo espaço físico e alguns serviços partilhados (como a biblioteca).",
+                "mapLocation": ["resources/locations/faculdade_psicologia.webp", "https://maps.app.goo.gl/t3KzWrGDm4Whkken8", "Mapa da localização da Faculdade de Psicologia"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/faculdade_psicologia_image1.webp", "Imagem 1 da Faculdade de Psicologia"],
+                    ["resources/buildings/faculdade_psicologia_image2.webp", "Imagem 2 da Faculdade de Psicologia"],
+                    ["resources/buildings/faculdade_psicologia_image3.webp", "Imagem 3 da Faculdade de Psicologia"],
+                    ["resources/buildings/faculdade_psicologia_image4.webp", "Imagem 4 da Faculdade de Psicologia"],
+                    ["resources/buildings/faculdade_psicologia_image5.webp", "Imagem 5 da Faculdade de Psicologia"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.30242",
@@ -76,16 +76,16 @@
                 "positionX": "0.59",
                 "positionY": "0.31",
                 "title": "Arquivo Nacional da Torre do Tombo",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "O Arquivo Nacional Torre do Tombo (ANTT) ou abreviadamente Torre do Tombo constitui o arquivo central de Portugal. Antigamente designado por Arquivo Geral do Reino, o ANTT é atualmente uma unidade orgânica nuclear da Direção-Geral do Livro, dos Arquivos e das Bibliotecas que se constitui como arquivo central do Estado Português desde a Idade Média, tendo os seus primeiros Guardas-Mores sido, também, Cronistas-Mores do Reino de Portugal. Com mais de 600 anos, é uma das mais antigas instituições portuguesas ainda ativas.<br><br>Ao longo dos séculos, a conservação dos seus documentos foi prejudicada por diversas circunstâncias: mudanças de local, incêndios, desvio de documentos para outros arquivos quando da Dinastia Filipina (1580-1640), o terramoto de 1755, a Guerra Peninsular, a transferência da corte portuguesa para o Brasil (1808-1821), e a Guerra Civil Portuguesa, entre outros.<br><br>Atualmente constitui-se numa moderna instituição, aberta a pesquisadores e ao público em geral. Encontra-se atualmente localizado na Cidade Universitária de Lisboa, freguesia de Alvalade, em Lisboa, num edifício projetado pelo arquiteto Arsénio Cordeiro, classificado, desde 2012, como monumento de interesse público.<br><br>O seu edifício correspondente à 2ª classe de patologia de estruturas de edifícios. Essa mesma classe refere-se às construções em alvenaria que suportam pavimentos horizontais suportados com vigas não ligadas à alvenaria nos pontos de apoio, este tipo de classe tem como características o suporte das cargas por flexão e corte; a autonomia estática das paredes verticais que prescindem da colaboração das vigas horizontais; ligações que não são livres, mas sim dotadas de atrito; o verso do ligamento dos pavimentos que deve ser alienadamente variados nos vários andares para que não haja desligamento das paredes ao longo da altura do edifício; imposição de restrições horizontais eficazes com notáveis benefícios para estabilidade do edifício e o deslizamento livre entre as alvenarias, por outro lado, nas empenas dos edifícios, onde o pavimento é estruturado paralelamente à parede, falta uma ligação transversal, e portanto a parede pode manifestar uma tendência para criar convexidade para o exterior.",
+                "mapLocation": ["resources/locations/torre_tombo.webp", "https://maps.app.goo.gl/D14B6wGncQCYKim97", "Mapa da localização da Torre do Tombo"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/torre_tombo_image1.webp", "Imagem 1 da Torre do Tombo"],
+                    ["resources/buildings/torre_tombo_image2.webp", "Imagem 2 da Torre do Tombo"],
+                    ["resources/buildings/torre_tombo_image3.webp", "Imagem 3 da Torre do Tombo"],
+                    ["resources/buildings/torre_tombo_image4.webp", "Imagem 4 da Torre do Tombo"],
+                    ["resources/buildings/torre_tombo_image5.webp", "Imagem 5 da Torre do Tombo"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.33573",
@@ -93,16 +93,16 @@
                 "positionX": "0.45",
                 "positionY": "0.82",
                 "title": "Faculdade de Ciências Edifício - C8",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "O edifício C8 é um dos oito edifícios pertencentes à Faculdade de Ciências localizados na Cidade Universitária, tendo sido o único galardoado com o Prémio Valmor e Municipal de Arquitetura (2000). Trata-se de um projeto do arquiteto Gonçalo Byrne (n.1941) construído entre 1993 e 1999, destinado a albergar o departamento de Química e Física. Foi o penúltimo edifício da Faculdade a ser inaugurado no local, após a sua transferência consecutiva em meados dos anos 80 na sequência de um violento incêndio nas instalações na Rua da Escola Politécnica. O edifício C8, planificado com pretensões de caraterizar o espaço urbano em que se insere e concomitante adaptação às suas funções laboratoriais, destaca-se pela sua aparência compacta e pelas fachadas ritmadas com estruturas em betão armado que sobressaem, desenvolvendo-se estruturalmente em torno de um pátio interior.",
+                "mapLocation": ["resources/locations/fcul_c8.webp", "https://maps.app.goo.gl/Ngofxz8EeqABAX8u9", "Mapa da localização da Faculdade de Ciências Edifício - C8"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/fcul_c8_image1.webp", "Imagem 1 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image2.webp", "Imagem 2 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image3.webp", "Imagem 3 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C8"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["resources/videos/video3Poster.webp", "resources/videos/video3.mp4"]
             },
             {
                 "start": "00.41381",
@@ -110,16 +110,16 @@
                 "positionX": "0.6",
                 "positionY": "0.54",
                 "title": "Faculdade de Ciências Edifício - C6",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "O edifício C6 engloba 4 departamentos da FCUL, desenvolvendo-se em redor de duas praças com uma geometria de configuração rectangular: a praça central de maiores dimensões e, a outra, aberta ao exterior a poente.<br><br>Forma um conjunto harmonioso de espaços públicos. Está subdividido em onze corpos estruturais, dado a ordem de grandeza das dimensões em planta e por diferenciações na volumetria. Com uma cave, destinada a estacionamento, e ocupando a quase totalidade da sua área de implantação, tem, no máximo, quatro pisos elevados, com cobertura em terraço.<br><br> As fachadas viradas para a praça central, com o piso da entrada vazado, são acentuadas pelo jogo existente entre as dimensões e a posição relativa da face exterior dos seus elementos constituintes – vigas e pilares – e os vãos constituídos por uma grelha com lâminas horizontais em betão armado que formam uma linha continua em toda a fachada. A galerias exteriores que rodeiam a praça, estabelecem a ligação entre átrios, auditórios e a cafetaria.<br><br>É constituído por estruturas em betão armado, do tipo porticado, com pilares e núcleos de paredes resistentes, definindo uma malha regular, ainda que as travessas desses pórticos sejam asseguradas por lajes fungiformes aligeiradas.<br><br>A solução corrente dos pavimentos é formada por lajes fungiformes em betão armado, aligeiradas com blocos prefabricados de betão, com capitéis maciços embebidos na espessura. A laje da praça central, com maiores vãos, foi executada em socalcos para minimizar os enchimentos necessários para formar as pendentes do pavimento. As fundações são do tipo indirecto através de estacas.",
+                "mapLocation": ["resources/locations/fcul_c6.webp", "https://maps.app.goo.gl/8H6JH5t8RQvHM59w6", "Mapa da localização da Faculdade de Ciências Edifício - C6"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/fcul_c6_image1.webp", "Imagem 1 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image2.webp", "Imagem 2 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image3.webp", "Imagem 3 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C6"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["resources/videos/video2Poster.webp", "videos/video2.mp4"]
             },
             {
                 "start": "00.47106",
@@ -127,16 +127,16 @@
                 "positionX": "0.46",
                 "positionY": "0.43",
                 "title": "Caleidoscópio",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "O espaço, destinado sobretudo a estudantes, está aberto a toda a comunidade universitária da cidade, mediante apresentação do cartão da Universidade.<br><br>Integrado no projeto de requalificação do Jardim do Campo Grande, o novo Caleidoscópio mantém a fisionomia exterior do edifício original, projetado em 1971 pelo arquiteto Nuno San Payo e integra um painel de cerâmica em relevo de autoria da ceramista Maria Emília Silva Araújo. O edifício com 2.700m2 foi inicialmente utilizado como posto turístico.<br><br>Em 1974 o espaço foi remodelado dando origem ao cinema Caleidoscópio e ao Centro Comercial Caleidoscópio. Em 2011, o edifício Caleidoscópio foi cedido pela Câmara à Universidade de Lisboa para instalação de um Centro Académico.<br><br>Em outubro de 2016, o espaço é inaugurado como uma sala de estudo, um centro de exposições, uma loja e um centro de documentação, à disposição da cidade de Lisboa.",
+                "mapLocation": ["resources/locations/caleidoescopio.webp", "https://maps.app.goo.gl/1bvxvpXr2ZPd74th9", "Mapa da localização do Caleidoscópio"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/caleidoscopio_image1.webp", "Imagem 1 do Caleidoscópio"],
+                    ["resources/buildings/caleidoscopio_image2.webp", "Imagem 2 do Caleidoscópio"],
+                    ["resources/buildings/caleidoscopio_image3.webp", "Imagem 3 do Caleidoscópio"],
+                    ["resources/buildings/caleidoscopio_image4.webp", "Imagem 4 do Caleidoscópio"],
+                    ["resources/buildings/caleidoscopio_image5.webp", "Imagem 5 do Caleidoscópio"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.52936",
@@ -144,16 +144,16 @@
                 "positionX": "0.56",
                 "positionY": "0.58",
                 "title": "Cantina Velha",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "A 'Cantina da Universidade de Lisboa', mais conhecida, atualmente, por 'Cantina Velha' foi inaugurada em 1961 na Avenida Professor Gama Pinto, na 'Cidade Unisersitária de Lisboa', sensivelmente em frentte ao edifício da 'Aula Magna'.<br><br>Foi projetada pelos arquitetos Manuel Norberto Correia e Rafael Miranda entre 1955 e 1956, acompanhados pela 'Comissão Administrativa das Novas Instalações Universitárias' e pelo Ministério das Obras Públicas. Seriam estes arquitetos também os responsáveis pela conceção da decoração e mobiliário.<br><br>Em 1959 teriam início as obras de construção, a cargo da empresa 'A. Silva & Silva, Lda', tendo como colaborador o engenheiro Mário Alberto Moura Figueiredo. Em 1961 é concluída a construção do edifício.",
+                "mapLocation": ["resources/locations/cantina_velha.webp", "https://maps.app.goo.gl/EFv7mtFno6CHK2CT8", "Mapa da localização da Cantina Velha"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/cantina_velha_image1.webp", "Imagem 1 da Cantina Velha"],
+                    ["resources/buildings/cantina_velha_image2.webp", "Imagem 2 da Cantina Velha"],
+                    ["resources/buildings/cantina_velha_image3.webp", "Imagem 3 da Cantina Velha"],
+                    ["resources/buildings/cantina_velha_image4.webp", "Imagem 4 da Cantina Velha"],
+                    ["resources/buildings/cantina_velha_image5.webp", "Imagem 5 da Cantina Velha"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "00.58870",
@@ -161,16 +161,16 @@
                 "positionX": "0.83",
                 "positionY": "0.44",
                 "title": "Escola Superiro de Enfermagem",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "A Escola Superior de Enfermagem de Lisboa, também conhecida pelas suas iniciais, ESEL, resulta da fusão de quatro escolas superiores em Lisboa. Sendo estas a Escola Superior de Enfermagem de Artur Ravara (adjacente à Escola Superior de Tecnologia da Saúde de Lisboa), a Escola Superior de Enfermagem de Calouste Gulbenkian de Lisboa (no Hospital de Santa Maria), a Escola Superior de Enfermagem de Francisco Gentil (no Instituto Português de Oncologia) e a Escola Superior de Enfermagem de Maria Fernanda Resende (no Hospital Júlio de Matos). Esta fusão tornou-se oficial no dia 27 de Fevereiro de 2007.<br><br>A génese deste processo remonta a 2001 com a publicação do Decreto-Lei nº99/2001 de 28 de Março e parte da necessidade de articular sinergias indispensáveis ao desenvolvimento do ensino e da profissão da enfermagem. A decisão de criar uma escola única foi uma decisão livremente assumida, que se consubstanciou na elaboração de um plano comum de desenvolvimento e na implementação de vários projectos conjuntos.<br><br>Das quatro prestigiadas instituições que lhe deram origem herda um património ímpar onde alicerça as suas referências:<br>- A Escola Superior de Enfermagem de Artur Ravara, outrora Escola Profissional de Enfermeiros (1901) e Escola de Enfermagem de Artur Ravara (1930), foi a primeira escola pública de Enfermagem em Portugal. A sua origem remonta ao século XIX, com a criação, em 1886, do primeiro Curso para a formação de enfermeiros no Hospital de S.José. Foi, ao longo de 120 anos, uma referência incontornável na história de enfermagem portuguesa.<br>- A Escola Superior de Enfermagem Francisco Gentil, foi criada em 1940, designada então por Escola Técnica de Enfermeiras do Instituto Português de Oncologia, sob a égide do Doutor Francisco Gentil, preocupado em assegurar ao país a formação de enfermeiros qualificados, capazes de participar, pela sua competência científica e humana, na melhoria da assistência de saúde. Apadrinhada pela Fundação Rockefeller, a sua tutela pertencia já ao ministério de educação.<br>- A Escola Superior de Enfermagem de Calouste Gulbenkian, de Lisboa, tem origem em 1957 com a designação de Escola de Enfermagem do Hospital de Santa Maria, criada aquando da abertura do Hospital Escolar de Lisboa, actual Hospital de Santa Maria. Em 1968, a Fundação Calouste Gulbenkian financiou a construção e o equipamento dos edifícios da Escola de Enfermagem de Calouste Gulbenkian, de Lisboa, e da Residência das Alunas, que foi inaugurada em 1972. Pioneira no associativismo estudantil em Enfermagem e nos seus 50 anos de existência, vocacionados para uma formação inicial de qualidade, diplomou cerca de 5000 enfermeiros.<br>- A Escola Superior de Enfermagem Maria Fernanda Resende foi o nome adoptado a partir de 1986 pela então Escola Pós-Básica de Lisboa, em memória da enfermeira Maria Fernanda Resende (1923-1988), cuja acção marcou fortemente o ensino e o desenvolvimento da enfermagem portuguesa. A Escola Pós-Básica de Lisboa entrou em funcionamento em 1984, com o objectivo de rentabilizar recursos de formação pós-graduada dispersos em várias instituições, integrando três núcleos que correspondiam respectivamente ás antigas escolas de Enfermagem Psiquiátrica de Lisboa, de Ensino e Administração de Enfermagem e de Enfermagem de Saúde Pública.",
+                "mapLocation": ["resources/locations/escola_superiro_enfermagem.webp", "https://maps.app.goo.gl/z3smX3fNP7m9RGNM8", "Mapa da localização da Escola Superior de Enfermagem"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/escola_superiro_enfermagem_image1.webp", "Imagem 1 da Escola Superior de Enfermagem"],
+                    ["resources/buildings/escola_superiro_enfermagem_image2.webp", "Imagem 2 da Escola Superior de Enfermagem"],
+                    ["resources/buildings/escola_superiro_enfermagem_image3.webp", "Imagem 3 da Escola Superior de Enfermagem"],
+                    ["resources/buildings/escola_superiro_enfermagem_image4.webp", "Imagem 4 da Escola Superior de Enfermagem"],
+                    ["resources/buildings/escola_superiro_enfermagem_image5.webp", "Imagem 5 da Escola Superior de Enfermagem"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             },
             {
                 "start": "01.05012",
@@ -178,16 +178,16 @@
                 "positionX": "0.42",
                 "positionY": "0.50",
                 "title": "Estádio Universitário de Lisboa",
-                "text": "A Faculdade de Ciências da Universidade de Lisboa (FCUL) é uma instituição de ensino público universitário localizada no Campo Grande, Lisboa, dedicada ao ensino e investigação nas áreas das ciências naturais e exactas.<br><br>Foi criada a 19 de Abril de 1911, mas as suas origens remontam à criação da Academia Real de Marinha em 1779 e à sua sucessora, a Escola Politécnica de Lisboa em 1837. Desde 1911 até 1985 (quando foi realojada nas instalações actuais na Cidade Universitária, em Lisboa) esteve instalada no antigo edifício da Escola Politécnica, cujas instalações são agora usadas como museu. A 10 de fevereiro de 2022, a Polícia Judiciária, após aviso do FBI, desmontou uma tentativa de ataque terrorista planeada por um estudante do curso de Engenharia Informática da instituição, às instalações e alunos da FCUL, visando assassinar o maior número possível de alunos, à semelhança dos massacres em instituições de ensino dos Estados Unidos.",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "text": "O Estádio Universitário de Lisboa (EUL) é um espaço verde e desportivo localizado na Cidade Universitária de Lisboa com cerca de 40 hectares de área.<br><br>O EUL funciona sob a forma de um serviço autónomo integrado na nova Universidade de Lisboa que resultou da fusão da Universidade de Lisboa com a Universidade Técnica de Lisboa em 2013.<br><br>É um amplo complexo desportivo e com bastante arvoredo, além do estádio de honra e dos campos de treino tem piscinas, campos de ténis e de padel e pavilhões polidesportivos.<br><br>O estádio foi inaugurado a 27 de Maio de 1956. O EUL como serviço foi criado em 1989 e integrado em 2013 na nova Universidade de Lisboa.<br><br>Dos vários eventos internacionais que já recebeu destacam-se o Campeonato Mundial Júnior de Atletismo de 1994, o Campeonato Ibero-americano de Atletismo de 1998 e as provas de atletismo dos Jogos da Lusofonia de 2009.<br><br>A seleção portuguesa de râguebi disputa no Estádio Universitário de Lisboa os jogos do Torneio Europeu das Nações.",
+                "mapLocation": ["resources/locations/estadio_universitario.webp", "https://maps.app.goo.gl/fBwrpE3eZxHoTp6e9", "Mapa da localização do Estádio Universitário de Lisboa"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/estadio_universitario_image1.webp", "Imagem 1 do Estádio Universitário de Lisboa"],
+                    ["resources/buildings/estadio_universitario_image2.webp", "Imagem 2 do Estádio Universitário de Lisboa"],
+                    ["resources/buildings/estadio_universitario_image3.webp", "Imagem 3 do Estádio Universitário de Lisboa"],
+                    ["resources/buildings/estadio_universitario_image4.webp", "Imagem 4 do Estádio Universitário de Lisboa"],
+                    ["resources/buildings/estadio_universitario_image5.webp", "Imagem 5 do Estádio Universitário de Lisboa"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "videos/video1.mp4"]
+                "video": ["noVideo", ""]
             }
         ]
     },
@@ -195,21 +195,43 @@
         "file": "resources/videos/video2.mp4",
         "checkpoints": [
             {
-                "start": "00.05169",
-                "end": "00.16182",
-                "positionX": "0.15",
-                "positionY": "0.15",
-                "title": "Teste Video 2",
-                "text": "Teste video 2",
-                "mapLocation": ["resources/locations/FCUL-C6.png", "https://maps.app.goo.gl/wcoTXYmWxnk8kx6b9", "Alt text"],
+                "start": "0.00000",
+                "end": "0.00000",
+                "positionX": "0.50",
+                "positionY": "0.50",
+                "title": "Faculdade de Ciências Edifício - C6",
+                "text": "O edifício C6 engloba 4 departamentos da FCUL, desenvolvendo-se em redor de duas praças com uma geometria de configuração rectangular: a praça central de maiores dimensões e, a outra, aberta ao exterior a poente.<br><br>Forma um conjunto harmonioso de espaços públicos. Está subdividido em onze corpos estruturais, dado a ordem de grandeza das dimensões em planta e por diferenciações na volumetria. Com uma cave, destinada a estacionamento, e ocupando a quase totalidade da sua área de implantação, tem, no máximo, quatro pisos elevados, com cobertura em terraço.<br><br> As fachadas viradas para a praça central, com o piso da entrada vazado, são acentuadas pelo jogo existente entre as dimensões e a posição relativa da face exterior dos seus elementos constituintes – vigas e pilares – e os vãos constituídos por uma grelha com lâminas horizontais em betão armado que formam uma linha continua em toda a fachada. A galerias exteriores que rodeiam a praça, estabelecem a ligação entre átrios, auditórios e a cafetaria.<br><br>É constituído por estruturas em betão armado, do tipo porticado, com pilares e núcleos de paredes resistentes, definindo uma malha regular, ainda que as travessas desses pórticos sejam asseguradas por lajes fungiformes aligeiradas.<br><br>A solução corrente dos pavimentos é formada por lajes fungiformes em betão armado, aligeiradas com blocos prefabricados de betão, com capitéis maciços embebidos na espessura. A laje da praça central, com maiores vãos, foi executada em socalcos para minimizar os enchimentos necessários para formar as pendentes do pavimento. As fundações são do tipo indirecto através de estacas.",
+                "mapLocation": ["resources/locations/fcul_c6.webp", "https://maps.app.goo.gl/8H6JH5t8RQvHM59w6", "Mapa da localização da Faculdade de Ciências Edifício - C6"],
                 "images": [
-                    ["resources/buildings/FCUL_C6_image1.png", "gsdssdf"],
-                    ["resources/buildings/FCUL_C6_image2.png", "sd"],
-                    ["resources/buildings/FCUL_C6_image3.png", "puujfdzfz"],
-                    ["resources/buildings/FCUL_C6_image4.png", "yrdg"],
-                    ["resources/buildings/FCUL_C6_image5.png", "aghdfsgf"]
+                    ["resources/buildings/fcul_c6_image1.webp", "Imagem 1 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image2.webp", "Imagem 2 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image3.webp", "Imagem 3 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C6"],
+                    ["resources/buildings/fcul_c6_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C6"]
                 ],
-                "video": ["resources/buildings/FCUL_C6_image1.png", "resources/videos/video2.mp4"]
+                "video": ["resources/videos/video1Poster.webp", "videos/video1.mp4"]
+            }
+        ]
+    },
+    "video3": {
+        "file": "resources/videos/video3.mp4",
+        "checkpoints": [
+            {
+                "start": "0.00000",
+                "end": "0.00000",
+                "positionX": "0.50",
+                "positionY": "0.50",
+                "title": "Faculdade de Ciências Edifício - C8",
+                "text": "O edifício C8 é um dos oito edifícios pertencentes à Faculdade de Ciências localizados na Cidade Universitária, tendo sido o único galardoado com o Prémio Valmor e Municipal de Arquitetura (2000). Trata-se de um projeto do arquiteto Gonçalo Byrne (n.1941) construído entre 1993 e 1999, destinado a albergar o departamento de Química e Física. Foi o penúltimo edifício da Faculdade a ser inaugurado no local, após a sua transferência consecutiva em meados dos anos 80 na sequência de um violento incêndio nas instalações na Rua da Escola Politécnica. O edifício C8, planificado com pretensões de caraterizar o espaço urbano em que se insere e concomitante adaptação às suas funções laboratoriais, destaca-se pela sua aparência compacta e pelas fachadas ritmadas com estruturas em betão armado que sobressaem, desenvolvendo-se estruturalmente em torno de um pátio interior.",
+                "mapLocation": ["resources/locations/fcul_c8.webp", "https://maps.app.goo.gl/Ngofxz8EeqABAX8u9", "Mapa da localização da Faculdade de Ciências Edifício - C8"],
+                "images": [
+                    ["resources/buildings/fcul_c8_image1.webp", "Imagem 1 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image2.webp", "Imagem 2 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image3.webp", "Imagem 3 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C8"],
+                    ["resources/buildings/fcul_c8_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C8"]
+                ],
+                "video": ["resources/videos/video1Poster.webp", "resources/videos/video1.mp4"]
             }
         ]
     }
