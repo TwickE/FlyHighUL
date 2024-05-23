@@ -219,6 +219,9 @@ videoPreview.addEventListener('click', () => {
     localStorage.setItem("videoSrcHistoryIndex", index.toString());
 
     checkVideoSourceAndPlay()
+
+    const header = document.querySelector('header');
+    header.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 // Restart the video and update the local storage
