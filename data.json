@@ -1,6 +1,7 @@
 {
     "video1": {
         "file": "resources/videos/video1.mp4",
+        "poster": "resources/videos/video1Poster.webp",
         "checkpoints": [
             {
                 "start": "00.13169",
@@ -119,7 +120,7 @@
                     ["resources/buildings/fcul_c6_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C6"],
                     ["resources/buildings/fcul_c6_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C6"]
                 ],
-                "video": ["resources/videos/video2Poster.webp", "videos/video2.mp4"]
+                "video": ["resources/videos/video2Poster.webp", "resources/videos/video2.mp4"]
             },
             {
                 "start": "00.47106",
@@ -193,10 +194,11 @@
     },
     "video2": {
         "file": "resources/videos/video2.mp4",
+        "poster": "resources/videos/video2Poster.webp",
         "checkpoints": [
             {
-                "start": "0.00000",
-                "end": "0.00000",
+                "start": "00.00000",
+                "end": "00.00000",
                 "positionX": "0.50",
                 "positionY": "0.50",
                 "title": "Faculdade de Ciências Edifício - C6",
@@ -209,16 +211,17 @@
                     ["resources/buildings/fcul_c6_image4.webp", "Imagem 4 da Faculdade de Ciências Edifício - C6"],
                     ["resources/buildings/fcul_c6_image5.webp", "Imagem 5 da Faculdade de Ciências Edifício - C6"]
                 ],
-                "video": ["resources/videos/video1Poster.webp", "videos/video1.mp4"]
+                "video": ["resources/videos/video1Poster.webp", "resources/videos/video1.mp4"]
             }
         ]
     },
     "video3": {
         "file": "resources/videos/video3.mp4",
+        "poster": "resources/videos/video3Poster.webp",
         "checkpoints": [
             {
-                "start": "0.00000",
-                "end": "0.00000",
+                "start": "00.00000",
+                "end": "00.00000",
                 "positionX": "0.50",
                 "positionY": "0.50",
                 "title": "Faculdade de Ciências Edifício - C8",

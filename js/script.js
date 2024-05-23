@@ -47,8 +47,6 @@ videoContent.addEventListener('play', function() {
         let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
         currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
 
-        document.getElementById("timer").innerHTML = currentTimeStamp;
-
         showCheckpoints(localStorage.getItem("currentVideoSrc"));
     }, 100);
 });
@@ -183,10 +181,25 @@ function restartVideo() {
     elementImageSlider.style.display = 'none';
     elementLocation.style.display = 'none';
     elementVideoBox.style.display = 'none';
+    informationTitle.innerHTML = 'Informações'
+
 
     noDataIcons.forEach(icon => {
         icon.style.display = '';
     });
+}
+
+function checkVideoSourceAndPlay() {
+    if(localStorage.getItem("currentVideoSrc") === "resources/videos/video1.mp4") {
+        noDataIcons.forEach(icon => {
+            icon.style.display = 'block';
+        });
+    }
+    else {
+        currentTimeStamp = "00.00000";
+        checkpoint.click();
+    }
+    player.play();
 }
 
 // Click on the video preview to navigate to other video
@@ -195,12 +208,17 @@ videoPreview.addEventListener('click', () => {
     myVideo.src = videoPreview.src;
     videoSrc = videoPreview.src;
     localStorage.setItem("currentVideoSrc", videoSrc);
+    myVideo.poster = dataMap.get(localStorage.getItem("currentVideoSrc")).poster;
 
     let localStorageArray = JSON.parse(localStorage.getItem("videoSrcHistory"));
     localStorageArray.push(videoSrc);
     localStorage.setItem("videoSrcHistory", JSON.stringify(localStorageArray));
 
-    player.play();
+    let index = parseInt(localStorage.getItem("videoSrcHistoryIndex"));
+    index++;
+    localStorage.setItem("videoSrcHistoryIndex", index.toString());
+
+    checkVideoSourceAndPlay()
 });
 
 // Restart the video and update the local storage
@@ -208,6 +226,7 @@ const btnRestartVideo = document.getElementById('btn-videoRestart');
 btnRestartVideo.addEventListener('click', () => {
     restartVideo();
     myVideo.src = "resources/videos/video1.mp4"
+    myVideo.poster = "resources/videos/video1Poster.webp";
     localStorage.setItem("currentVideoSrc", "resources/videos/video1.mp4");
     localStorage.setItem("videoSrcHistory", JSON.stringify(["resources/videos/video1.mp4"]));
     localStorage.setItem("videoSrcHistoryIndex", "0");
@@ -223,8 +242,11 @@ btnPreviousVideo.addEventListener('click', () => {
         let previousVideoSrc = localStorageArray[index];
         restartVideo();
         myVideo.src = previousVideoSrc;
+        myVideo.poster = dataMap.get(previousVideoSrc).poster;
         localStorage.setItem("currentVideoSrc", previousVideoSrc);
         localStorage.setItem("videoSrcHistoryIndex", index.toString());
+
+        checkVideoSourceAndPlay()
     }
 });
 
@@ -238,13 +260,17 @@ btnNextVideo.addEventListener('click', () => {
         let nextVideoSrc = localStorageArray[index];
         restartVideo();
         myVideo.src = nextVideoSrc;
+        myVideo.poster = dataMap.get(nextVideoSrc).poster;
         localStorage.setItem("currentVideoSrc", nextVideoSrc);
         localStorage.setItem("videoSrcHistoryIndex", index.toString());
+
+        checkVideoSourceAndPlay()
     }
 });
 
 //CSS functions
 window.addEventListener('load', () => {
+    localStorage.setItem("videoSrcHistoryIndex", 0);
     resizeInformationWindow();
 });
 
