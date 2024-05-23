@@ -1,6 +1,6 @@
 # FlyHighUL
  
- Uma experiência imersiva para os visitantes virtuais da ULisboa, permitindo-lhes explorar o campus de uma forma única, envolvente e interativa.
+An immersive experience for virtual visitors to the University of Lisbon, allowing them to explore the campus in a unique, engaging and interactive way.
 
 ## Desktop Version
 Website desktop version
