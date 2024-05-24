@@ -37,61 +37,7 @@ let currentTimeStamp = "00.00000";
 let videoContent = document.getElementById("myVideo");
 let intervalId;
 
-// Updates the currentTimeStamp variable every 100ms while the video is playing
-videoContent.addEventListener('play', function() {
-    intervalId = setInterval(function() {
-        let rawMinutes = videoContent.currentTime / 60;
-        let minutes = Math.floor(rawMinutes).toString().padStart(2, '0');
-        let rawSeconds = (rawMinutes * 60) % 60;
-        let seconds = Math.floor(rawSeconds).toString().padStart(2, '0');
-        let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
-        currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
-
-        showCheckpoints(localStorage.getItem("currentVideoSrc"));
-    }, 100);
-});
-
-// Stops the interval when the video is paused
-videoContent.addEventListener('pause', function() {
-    clearInterval(intervalId);
-});
-
-// Fetches the checkpoints from the dataMap and displays them on the video
-function showCheckpoints(videoSrc) {
-    let videoData = dataMap.get(videoSrc);
-    if (videoData) {
-        let isWithinCheckpoint = false;
-        for (let checkpoint of videoData.checkpoints) {
-            if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
-                isWithinCheckpoint = true;
-                positionCheckpoint(checkpoint.positionX, checkpoint.positionY);
-                break;
-            }
-        }
-        document.getElementById("checkpoint").style.display = isWithinCheckpoint ? "flex" : "none";
-    }
-}
-
-// Positions the checkpoint on top of the video
-function positionCheckpoint(horizontalOffsetRatio, verticalOffsetRatio) {
-    const video = document.getElementById('myVideo');
-
-    const videoRect = video.getBoundingClientRect();
-    const videoX = videoRect.left;
-    const videoY = videoRect.top;
-
-    let adjustment = 0;
-    adjustment = window.innerWidth <= 650 ? 11 : 15;
-
-    let checkpointLeft = videoX + window.scrollX + (videoRect.width * horizontalOffsetRatio) - adjustment;
-    let checkpointTop = videoY + window.scrollY + (videoRect.height * verticalOffsetRatio) - adjustment;
-
-    checkpoint.style.left = checkpointLeft + 'px';
-    checkpoint.style.top = checkpointTop + 'px';
-}
-
 // Variables for the checkpoint information
-const checkpoint = document.getElementById('checkpoint');
 const informationTitle = document.getElementById('information-title');
 const informationText = document.getElementById('information-text');
 const images = document.querySelectorAll('.image');
@@ -104,49 +50,88 @@ const elementVideoBox = document.getElementsByClassName('video-box')[0];
 const elementLocation = document.getElementsByClassName('box-container-location')[0];
 const noDataIcons = document.querySelectorAll('.no-data');
 
-// Click on the checkpoint to display the information
-checkpoint.addEventListener('click', () => {
-    if (noDataIcons[0].style.display !== 'none')
-    {
-        noDataIcons.forEach(icon => {
-            icon.style.display = 'none';
-        });
-    }
-    getCheckpointData(localStorage.getItem("currentVideoSrc"));
+// Updates the currentTimeStamp variable every 100ms while the video is playing
+videoContent.addEventListener('play', function() {
+    intervalId = setInterval(function() {
+        let rawMinutes = videoContent.currentTime / 60;
+        let minutes = Math.floor(rawMinutes).toString().padStart(2, '0');
+        let rawSeconds = (rawMinutes * 60) % 60;
+        let seconds = Math.floor(rawSeconds).toString().padStart(2, '0');
+        let milliseconds = Math.floor((rawSeconds % 1) * 1000).toString().padStart(3, '0');
+        currentTimeStamp = `${minutes}.${seconds}${milliseconds}`;
+
+        getCheckpointData(localStorage.getItem("currentVideoSrc"));
+    }, 100);
 });
 
-// Fetches the checkpoint data from the dataMap
+// Stops the interval when the video is paused
+videoContent.addEventListener('pause', function() {
+    clearInterval(intervalId);
+});
+
+// Fetches the checkpoint data from the dataMap and displays it
+let currentCheckpoint = null;
+
 function getCheckpointData(videoSrc) {
     let videoData = dataMap.get(videoSrc);
     if (videoData) {
+        let checkpointMatched = false; // Define checkpointMatched here
         for (let checkpoint of videoData.checkpoints) {
             if (currentTimeStamp >= checkpoint.start && currentTimeStamp <= checkpoint.end) {
-                elementInformation.style.display = 'none';
-                elementImageSlider.style.display = 'none';
-                elementLocation.style.display = 'none';
-                elementVideoBox.style.display = 'none';
+                checkpointMatched = true; // Set to true if a checkpoint is matched
+                // Only update display if the checkpoint has changed
+                if (checkpoint !== currentCheckpoint) {
+                    currentCheckpoint = checkpoint;
 
-                informationTitle.innerHTML = checkpoint.title;
-                informationText.innerHTML = checkpoint.text;
-                mapImage.src = checkpoint.mapLocation[0];
-                mapImage.alt = checkpoint.mapLocation[2];
-                mapLink.href = checkpoint.mapLocation[1];
-                images.forEach((image, index) => {
-                    image.src = checkpoint.images[index][0];
-                    image.alt = checkpoint.images[index][1];
-                });
+                    if (noDataIcons[0].style.display !== 'none') {
+                        noDataIcons.forEach(icon => {
+                            icon.style.display = 'none';
+                        });
+                    }
 
-                let loadedImagesCount = 0;
-                images.forEach((image) => {
-                    image.onload = function() {
-                        loadedImagesCount++;
-                        if (loadedImagesCount === images.length) {
-                            // All images have loaded, now display the elements
-                            displayElements(checkpoint);
-                        }
-                    };
-                });
+                    // Remove the fadeIn class to reset the animation
+                    elementInformation.classList.remove('animate__fadeIn');
+                    elementImageSlider.classList.remove('animate__fadeIn');
+                    elementLocation.classList.remove('animate__fadeIn');
+                    elementVideoBox.classList.remove('animate__fadeIn');
+
+                    // Force a reflow to reset the animation
+                    void elementInformation.offsetWidth;
+                    void elementImageSlider.offsetWidth;
+                    void elementLocation.offsetWidth;
+                    void elementVideoBox.offsetWidth;
+
+                    // Add the fadeIn class to start the animation
+                    elementInformation.classList.add('animate__fadeIn');
+                    elementImageSlider.classList.add('animate__fadeIn');
+                    elementLocation.classList.add('animate__fadeIn');
+                    elementVideoBox.classList.add('animate__fadeIn');
+
+                    informationTitle.innerHTML = checkpoint.title;
+                    informationText.innerHTML = checkpoint.text;
+                    mapImage.src = checkpoint.mapLocation[0];
+                    mapImage.alt = checkpoint.mapLocation[2];
+                    mapLink.href = checkpoint.mapLocation[1];
+                    images.forEach((image, index) => {
+                        image.src = checkpoint.images[index][0];
+                        image.alt = checkpoint.images[index][1];
+                    });
+
+                    let loadedImagesCount = 0;
+                    images.forEach((image) => {
+                        image.onload = function() {
+                            loadedImagesCount++;
+                            if (loadedImagesCount === images.length) {
+                                // All images have loaded, now display the elements
+                                displayElements(checkpoint);
+                            }
+                        };
+                    });
+                }
             }
+        }
+        if (!checkpointMatched) {
+            restartVideo();
         }
     }
 }
@@ -176,7 +161,6 @@ function displayElements(checkpoint) {
 
 // Resets the video and information elements
 function restartVideo() {
-    checkpoint.style.display = 'none';
     elementInformation.style.display = 'none';
     elementImageSlider.style.display = 'none';
     elementLocation.style.display = 'none';
