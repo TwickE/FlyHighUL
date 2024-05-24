@@ -5,7 +5,7 @@
         "checkpoints": [
             {
                 "start": "00.13169",
-                "end": "00.16182",
+                "end": "00.16530",
                 "positionX": "0.30",
                 "positionY": "0.70",
                 "title": "Reitoria",
@@ -21,7 +21,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.16916",
+                "start": "00.16531",
                 "end": "00.21705",
                 "positionX": "0.60",
                 "positionY": "0.50",
@@ -38,7 +38,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.21809",
+                "start": "00.21706",
                 "end": "00.26182",
                 "positionX": "0.22",
                 "positionY": "0.76",
@@ -55,7 +55,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.26390",
+                "start": "00.26183",
                 "end": "00.30137",
                 "positionX": "0.42",
                 "positionY": "0.45",
@@ -72,7 +72,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.30242",
+                "start": "00.30138",
                 "end": "00.33469",
                 "positionX": "0.59",
                 "positionY": "0.31",
@@ -89,7 +89,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.33573",
+                "start": "00.33470",
                 "end": "00.41277",
                 "positionX": "0.45",
                 "positionY": "0.82",
@@ -106,7 +106,7 @@
                 "video": ["resources/videos/video3Poster.webp", "resources/videos/video3.mp4"]
             },
             {
-                "start": "00.41381",
+                "start": "00.41278",
                 "end": "00.47002",
                 "positionX": "0.6",
                 "positionY": "0.54",
@@ -123,7 +123,7 @@
                 "video": ["resources/videos/video2Poster.webp", "resources/videos/video2.mp4"]
             },
             {
-                "start": "00.47106",
+                "start": "00.47003",
                 "end": "00.52832",
                 "positionX": "0.46",
                 "positionY": "0.43",
@@ -140,7 +140,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.52936",
+                "start": "00.52833",
                 "end": "00.58766",
                 "positionX": "0.56",
                 "positionY": "0.58",
@@ -157,7 +157,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "00.58870",
+                "start": "00.58767",
                 "end": "01.04908",
                 "positionX": "0.83",
                 "positionY": "0.44",
@@ -174,7 +174,7 @@
                 "video": ["noVideo", ""]
             },
             {
-                "start": "01.05012",
+                "start": "01.05909",
                 "end": "01.10900",
                 "positionX": "0.42",
                 "positionY": "0.50",
