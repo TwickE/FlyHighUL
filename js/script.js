@@ -167,23 +167,9 @@ function restartVideo() {
     elementVideoBox.style.display = 'none';
     informationTitle.innerHTML = 'Informações'
 
-
     noDataIcons.forEach(icon => {
         icon.style.display = '';
     });
-}
-
-function checkVideoSourceAndPlay() {
-    if(localStorage.getItem("currentVideoSrc") === "resources/videos/video1.mp4") {
-        noDataIcons.forEach(icon => {
-            icon.style.display = 'block';
-        });
-    }
-    else {
-        currentTimeStamp = "00.00000";
-        checkpoint.click();
-    }
-    player.play();
 }
 
 // Click on the video preview to navigate to other video
@@ -202,10 +188,10 @@ videoPreview.addEventListener('click', () => {
     index++;
     localStorage.setItem("videoSrcHistoryIndex", index.toString());
 
-    checkVideoSourceAndPlay()
-
     const header = document.querySelector('header');
     header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    player.play();
 });
 
 // Restart the video and update the local storage
@@ -233,7 +219,7 @@ btnPreviousVideo.addEventListener('click', () => {
         localStorage.setItem("currentVideoSrc", previousVideoSrc);
         localStorage.setItem("videoSrcHistoryIndex", index.toString());
 
-        checkVideoSourceAndPlay()
+        player.play();
     }
 });
 
@@ -251,7 +237,7 @@ btnNextVideo.addEventListener('click', () => {
         localStorage.setItem("currentVideoSrc", nextVideoSrc);
         localStorage.setItem("videoSrcHistoryIndex", index.toString());
 
-        checkVideoSourceAndPlay()
+        player.play();
     }
 });
 

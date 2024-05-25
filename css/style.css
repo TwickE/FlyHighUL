@@ -508,8 +508,9 @@ video::-webkit-media-controls-enclosure {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 5px;
+    border: 2px solid white;
 }
 
 #video-preview span:nth-child(2) {
