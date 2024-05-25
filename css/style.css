@@ -336,7 +336,13 @@ video::-webkit-media-controls-enclosure {
     min-height: 290px;
 }
 
-.box-container-location>a {
+.box-container-location iframe {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* .box-container-location>a {
     display: flex;
     justify-content: center;
 }
@@ -349,7 +355,7 @@ video::-webkit-media-controls-enclosure {
     width: 100%;
     height: auto;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .box-container-location img:hover {
     transform: scale(1.05);

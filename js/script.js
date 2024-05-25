@@ -109,9 +109,9 @@ function getCheckpointData(videoSrc) {
 
                     informationTitle.innerHTML = checkpoint.title;
                     informationText.innerHTML = checkpoint.text;
-                    mapImage.src = checkpoint.mapLocation[0];
+                    /* mapImage.src = checkpoint.mapLocation[0];
                     mapImage.alt = checkpoint.mapLocation[2];
-                    mapLink.href = checkpoint.mapLocation[1];
+                    mapLink.href = checkpoint.mapLocation[1]; */
                     images.forEach((image, index) => {
                         image.src = checkpoint.images[index][0];
                         image.alt = checkpoint.images[index][1];
