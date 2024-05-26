@@ -324,15 +324,18 @@ video::-webkit-media-controls-enclosure {
 }
 
 .box-container-location {
+    position: relative;
     display: flex;
     background-color: var(--primmary-color);
     border-radius: 0 0 12px 12px;
     justify-content: center;
     padding: 20px;
     height: calc(100% - 100px);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.section-loaction {
+.section-location {
     min-height: 290px;
 }
 
@@ -340,6 +343,90 @@ video::-webkit-media-controls-enclosure {
     width: 100%;
     border: none;
     border-radius: 12px;
+}
+
+/* #checkpoint {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--interactable-color);
+    transition: all 0.3s ease-in-out;
+    animation: interactibleAnimation 2s infinite ease-in-out;
+}
+
+#checkpoint span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+
+@keyframes interactibleAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+} */
+
+#checkpoint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+
+#checkpoint span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    z-index: 1;
+}
+
+#checkpoint::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--interactable-color);
+    transition: all 0.3s ease-in-out;
+    animation: interactibleAnimation 2s infinite ease-in-out;
+}
+
+@keyframes interactibleAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* .box-container-location>a {
@@ -479,7 +566,8 @@ video::-webkit-media-controls-enclosure {
     font-size: 1.2rem;
     background-color: var(--primmary-color);
     border-radius: 0 0 12px 12px;
-    height: calc(100% - 60px);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .video-box h3 {
@@ -617,61 +705,9 @@ footer h2 {
     height: 80px;
 }
 
-#checkpoint {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--interactable-color);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    animation: interactibleAnimation 2s infinite ease-in-out;
-}
-
-#checkpoint span {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-}
-
-@keyframes interactibleAnimation {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-#checkpoint span:active {
-    background-color: var(--primmary-color);
-}
-
 .no-data {
     max-width: 100px;
     margin: auto;
-}
-
-.smoth-transition {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-}
-
-.smoth-transition.activated {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
 }
 
 .animate__animated {

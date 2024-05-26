@@ -241,6 +241,12 @@ btnNextVideo.addEventListener('click', () => {
     }
 });
 
+function updateLocation(latitude, longitude) {
+    var iframe = document.querySelector('.box-container-location iframe');
+    var newUrl = 'https://www.google.com/maps/embed/v1/view?key=*****************&center=' + latitude + ',' + longitude + '&zoom=18&maptype=roadmap';
+    iframe.src = newUrl;
+}
+
 //CSS functions
 window.addEventListener('load', () => {
     localStorage.setItem("videoSrcHistoryIndex", 0);
