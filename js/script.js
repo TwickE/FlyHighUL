@@ -42,8 +42,7 @@ const informationTitle = document.getElementById('information-title');
 const informationText = document.getElementById('information-text');
 const images = document.querySelectorAll('.image');
 const videoPreview = document.getElementById('video-preview');
-const mapImage = document.getElementById('map-image');
-const mapLink = document.getElementById('map-link');
+const mapIframe = document.getElementById('map-iframe');
 const elementInformation = document.getElementsByClassName('scrollable-text-container')[0];
 const elementImageSlider = document.getElementsByClassName('slider')[0];
 const elementVideoBox = document.getElementsByClassName('video-box')[0];
@@ -109,9 +108,7 @@ function getCheckpointData(videoSrc) {
 
                     informationTitle.innerHTML = checkpoint.title;
                     informationText.innerHTML = checkpoint.text;
-                    /* mapImage.src = checkpoint.mapLocation[0];
-                    mapImage.alt = checkpoint.mapLocation[2];
-                    mapLink.href = checkpoint.mapLocation[1]; */
+                    mapIframe.src = checkpoint.mapLocation;
                     images.forEach((image, index) => {
                         image.src = checkpoint.images[index][0];
                         image.alt = checkpoint.images[index][1];
@@ -241,11 +238,11 @@ btnNextVideo.addEventListener('click', () => {
     }
 });
 
-function updateLocation(latitude, longitude) {
+/* function updateLocation(latitude, longitude) {
     var iframe = document.querySelector('.box-container-location iframe');
     var newUrl = 'https://www.google.com/maps/embed/v1/view?key=*****************&center=' + latitude + ',' + longitude + '&zoom=18&maptype=roadmap';
     iframe.src = newUrl;
-}
+} */
 
 //CSS functions
 window.addEventListener('load', () => {
