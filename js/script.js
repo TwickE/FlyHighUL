@@ -262,6 +262,56 @@ document.querySelectorAll('.nav-link').forEach(n =>
     })
 );
 
+//Scrools to the developers section
+document.getElementById('developers-nav').addEventListener('click', () => {
+    window.scrollTo(0, document.body.scrollHeight);
+});
+
+const modal = document.getElementById('theme-modal');
+//Opens the theme section
+document.getElementById('theme-nav').addEventListener('click', () => {
+    if (modal.style.display === 'none') {
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+    }
+    else {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
+});
+
+document.getElementById('theme1').addEventListener('click', () => {
+    document.documentElement.style.setProperty('--primmary-color', '#0c4da2');
+    document.documentElement.style.setProperty('--bg-color', '#ddf4ff');
+    document.documentElement.style.setProperty('--primmary-color-30-opacity', '#0c4da24d');
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+});
+
+document.getElementById('theme2').addEventListener('click', () => {
+    document.documentElement.style.setProperty('--primmary-color', '#0ca242');
+    document.documentElement.style.setProperty('--bg-color', '#ddffe5');
+    document.documentElement.style.setProperty('--primmary-color-30-opacity', '#0ca2424d');
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+});
+
+document.getElementById('theme3').addEventListener('click', () => {
+    document.documentElement.style.setProperty('--primmary-color', '#d02525');
+    document.documentElement.style.setProperty('--bg-color', '#ffdddd');
+    document.documentElement.style.setProperty('--primmary-color-30-opacity', '#d025254d');
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+});
+
+document.getElementById('theme4').addEventListener('click', () => {
+    document.documentElement.style.setProperty('--primmary-color', '#e5901f');
+    document.documentElement.style.setProperty('--bg-color', '#ffefdd');
+    document.documentElement.style.setProperty('--primmary-color-30-opacity', '#e5901f4d');
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+});
+
 window.addEventListener('load', () => {
     localStorage.setItem("videoSrcHistoryIndex", 0);
     resizeInformationWindow();
