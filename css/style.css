@@ -872,6 +872,7 @@ footer h2 {
     border-radius: 12px;
     font-size: 2rem;
 }
+
 .container-video-info-text h2 {
     margin-bottom: 30px;
 }
@@ -902,6 +903,32 @@ footer h2 {
 .container-video-info-text p:nth-child(1) {
     color: var(--white-color);
     margin-bottom: 10px;
+}
+
+#video-player-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+}
+
+#video-player-modal svg {
+    width: 30px;
+    margin-bottom: 30px;
+}
+
+#modalVideoPlayer {
+    width: 100%;
+    border-radius: 12px;
 }
 
 
@@ -1124,14 +1151,15 @@ footer h2 {
     .container-video-info-text {
         font-size: 1.5rem;
     }
+
     .container-video-info-text h2 {
         margin-bottom: 30px;
     }
-    
+
     .container-video-info-text a {
         font-size: 1rem;
     }
-    
+
     .container-video-info-text p {
         font-size: 1rem;
     }
