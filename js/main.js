@@ -32,14 +32,29 @@ document.getElementById('developers-nav').addEventListener('click', () => {
 
 const modal = document.getElementById('theme-modal');
 //Opens the theme section
-document.getElementById('theme-nav').addEventListener('click', () => {
-    if (modal.style.display === 'none') {
-        modal.style.display = 'flex';
-        document.body.classList.add('modal-open');
-    }
-    else {
-        modal.style.display = 'none';
-        document.body.classList.remove('modal-open');
+document.getElementById('theme-nav').addEventListener('click', (event1) => {
+    try {
+        const videoPlayerModal = document.getElementById('video-player-modal');
+        if (videoPlayerModal.style.display !== 'flex') {
+            if (modal.style.display === 'none') {
+                modal.style.display = 'flex';
+                document.body.classList.add('modal-open');
+            }
+            else {
+                modal.style.display = 'none';
+                document.body.classList.remove('modal-open');
+            }
+        }
+    } 
+    catch {
+        if (modal.style.display === 'none') {
+            modal.style.display = 'flex';
+            document.body.classList.add('modal-open');
+        }
+        else {
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
     }
 });
 
