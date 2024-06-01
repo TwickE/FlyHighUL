@@ -3,20 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0c4da2">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/plyr.css">
-    <script src="js/script.min.js" defer></script>
+    <link rel="stylesheet" href="css/plyr.css" />
+    <script src="js/index.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
     <script src="js/plyr.js"></script>
     <link rel="shortcut icon" href="resources/favicon.ico">
     <title>Fly High UL</title>
 </head>
 <body>
     <header>
-        <img src="resources/FlyHighUL_Logo.svg" alt="">
-        <img src="resources/FCUL_Logo.svg" alt="">
+        <nav class="navbar">
+            <a href="index.html" class="animate__animated animate__fadeInDown animate__slow">
+                <img src="resources/FlyHighUL_Logo.svg" alt="FlyHighUL logo" class="nav-branding">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a href="index.html" id="main-page-nav" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a href="videos.html" id="videos-page-nav" class="nav-link">Vídeos</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a id="theme-nav" class="nav-link">Cores</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a id="developers-nav" class="nav-link">Desenvolvedores</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
     <main>
+        <section class="animate__animated animate__fadeIn" id="theme-modal" style="display: none;">
+            <div class="close-theme">
+                <svg id="closeModalTheme" class="closeModal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+                </svg>
+            </div>
+            <h2>Escolha um Tema</h2>
+            <div>
+                <span class="theme-square" id="theme1"><span></span></span>
+                <span class="theme-square" id="theme2"><span></span></span>
+                <span class="theme-square" id="theme3"><span></span></span>
+                <span class="theme-square" id="theme4"><span></span></span>
+            </div>
+        </section>
         <div class="container-top">
             <section class="container-videoPlayer animate__animated animate__backInLeft">
                 <div class="container-videoNavigation">

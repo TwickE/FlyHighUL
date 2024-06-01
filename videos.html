@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/plyr.css" />
+    <script src="js/videos.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+    <script src="js/plyr.js"></script>
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <title>Fly High UL</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="animate__animated animate__fadeInDown animate__slow">
+                <img src="resources/FlyHighUL_Logo.svg" alt="FlyHighUL logo" class="nav-branding">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a href="index.html" id="main-page-nav" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a href="videos.html" id="videos-page-nav" class="nav-link">Vídeos</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a id="theme-nav" class="nav-link">Cores</a>
+                </li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow">
+                    <a id="developers-nav" class="nav-link">Desenvolvedores</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="animate__animated animate__fadeIn" id="theme-modal" style="display: none;">
+            <div class="close-theme">
+                <svg id="closeModalTheme" class="closeModal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+                </svg>
+            </div>
+            <h2>Escolha um Tema</h2>
+            <div>
+                <span class="theme-square" id="theme1"><span></span></span>
+                <span class="theme-square" id="theme2"><span></span></span>
+                <span class="theme-square" id="theme3"><span></span></span>
+                <span class="theme-square" id="theme4"><span></span></span>
+            </div>
+        </section>
+        <section id="video-player-modal" class="animate__animated animate__fadeIn" style="display: none;">
+            <svg id="closeModalVideo" class="closeModal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+            </svg>
+            <div class="container-video-modal">
+                <video id="modalVideoPlayer" src="resources/videos/video1.mp4" poster="resources/videos/video1Poster.webp" controls playsinline></video>
+            </div>
+        </section>
+        <section class="section-all-videos animate__animated animate__backInLeft">
+            <div class="container-video-info">
+                <a id="video1" class="video-preview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="container-video-info-text">
+                    <h2>Fly High UL - A UL como nunca antes vista</h2>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=UK8gCv-ARQc" target="_blank">
+                            <svg width="70" height="56" viewBox="0 0 70 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63.4157 29.2796C69.5954 23.0999 69.5954 13.0921 63.4157 6.91238C57.947 1.44363 49.3282 0.732695 43.0392 5.22801L42.8642 5.34832C41.2892 6.47488 40.9282 8.66238 42.0548 10.2264C43.1813 11.7905 45.3688 12.1624 46.9329 11.0358L47.1079 10.9155C50.6188 8.41082 55.4204 8.80457 58.461 11.8561C61.9063 15.3014 61.9063 20.8796 58.461 24.3249L46.1892 36.6186C42.7438 40.0639 37.1657 40.0639 33.7204 36.6186C30.6688 33.5671 30.2751 28.7655 32.7798 25.2655L32.9001 25.0905C34.0267 23.5155 33.6548 21.328 32.0907 20.2124C30.5267 19.0968 28.3282 19.4577 27.2126 21.0218L27.0923 21.1968C22.586 27.4749 23.297 36.0936 28.7657 41.5624C34.9454 47.7421 44.9532 47.7421 51.1329 41.5624L63.4157 29.2796ZM6.58447 26.7202C0.404785 32.8999 0.404785 42.9077 6.58447 49.0874C12.0532 54.5561 20.672 55.2671 26.961 50.7718L27.136 50.6514C28.711 49.5249 29.072 47.3374 27.9454 45.7733C26.8188 44.2093 24.6313 43.8374 23.0673 44.9639L22.8923 45.0843C19.3813 47.5889 14.5798 47.1952 11.5392 44.1436C8.09385 40.6874 8.09385 35.1093 11.5392 31.6639L23.811 19.3811C27.2563 15.9358 32.8345 15.9358 36.2798 19.3811C39.3313 22.4327 39.7251 27.2343 37.2204 30.7452L37.1001 30.9202C35.9735 32.4952 36.3454 34.6827 37.9095 35.7983C39.4735 36.9139 41.672 36.553 42.7876 34.9889L42.9079 34.8139C47.4142 28.5249 46.7032 19.9061 41.2345 14.4374C35.0548 8.25769 25.047 8.25769 18.8673 14.4374L6.58447 26.7202Z" fill="white"/>
+                            </svg>
+                            Vídeo Original
+                        </a>
+                        <p>Este vídeo foi originalmente retirado do Youtube e depois editado por nós no CapCut.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-video-info">
+                <a id="video2" class="video-preview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="container-video-info-text">
+                    <h2>Edifício C6 - Faculdade de Ciências</h2>
+                    <div>
+                        <p>Autores: Frederico Silva, João Costa, Filipe Lopes, João Silva</p>
+                        <p>Este vídeo foi gravado no edifício C6 depois de um dia de aulas e editado por nós no CapCut.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-video-info">
+                <a id="video3" class="video-preview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="container-video-info-text">
+                    <h2>Edifício C8 - Faculdade de Ciências</h2>
+                    <div>
+                        <p>Autores: Frederico Silva, João Costa, Filipe Lopes, João Silva</p>
+                        <p>Este vídeo foi gravado no edifício C8 depois de um dia de aulas e editado por nós no CapCut.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Fly High UL - Projeto de Multiméda</h2>
+        <div class="container-footer">
+            <div class="container-developers">
+                <div class="container-developers-groups">
+                    <div class="container-developer">
+                        <img src="resources/developers/frederico_silva.webp" alt="Frederico Silva">
+                        <h3>Frederico Silva</h3>
+                        <p>fc 63039</p>
+                    </div>
+                    <div class="container-developer">
+                        <img src="resources/developers/joao_costa.webp" alt="João Costa">
+                        <h3>João Costa</h3>
+                        <p>fc 54482</p>
+                    </div>
+                </div>
+                <div class="container-developers-groups">
+                    <div class="container-developer">
+                        <img src="resources/developers/filipe_lopes.webp" alt="Filipe Lopes">
+                        <h3>Filipe Lopes</h3>
+                        <p>fc 61015</p>
+                    </div>
+                    <div class="container-developer">
+                        <img src="resources/developers/joao_silva.webp" alt="João Silva">
+                        <h3>João Silva</h3>
+                        <p>fc 60898</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-logos">
+                <img src="resources/FlyHighUL_Logo.svg" alt="">
+                <img src="resources/FCUL_Logo.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
