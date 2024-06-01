@@ -58,6 +58,12 @@ document.getElementById('theme-nav').addEventListener('click', (event1) => {
     }
 });
 
+const closeModalTheme = document.getElementById('closeModalTheme');
+closeModalTheme.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+});
+
 function setTheme(primaryColor, bgColor, primaryColorOpacity) {
     document.documentElement.style.setProperty('--primmary-color', primaryColor);
     document.documentElement.style.setProperty('--bg-color', bgColor);

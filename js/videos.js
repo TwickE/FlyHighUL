@@ -28,9 +28,9 @@ window.addEventListener('load', () => {
 
 const modalVideoPlayer = document.getElementById('video-player-modal');
 const video = document.getElementById('modalVideoPlayer');
-const closeModal = document.getElementById('closeModal');
+const closeModalVideo = document.getElementById('closeModalVideo');
 
-closeModal.addEventListener('click', () => {
+closeModalVideo.addEventListener('click', () => {
     playerVideos.stop();
     modalVideoPlayer.style.display = 'none';
     document.body.classList.remove('modal-open');
