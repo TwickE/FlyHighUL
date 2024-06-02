@@ -49,19 +49,19 @@ function openVideoModal(videoSrc) {
 }
 
 const video1 = document.getElementById('video1');
-video1.style.backgroundImage = 'url(/resources/videos/video1poster.webp)';
+video1.style.backgroundImage = 'url(./resources/videos/video1poster.webp)';
 video1.addEventListener('click', () => {
-    openVideoModal('/resources/videos/video1.mp4');
+    openVideoModal('./resources/videos/video1.mp4');
 });
 
 const video2 = document.getElementById('video2');
-video2.style.backgroundImage = 'url(/resources/videos/video2poster.webp)';
+video2.style.backgroundImage = 'url(./resources/videos/video2poster.webp)';
 video2.addEventListener('click', () => {
-    openVideoModal('/resources/videos/video2.mp4');
+    openVideoModal('./resources/videos/video2.mp4');
 });
 
 const video3 = document.getElementById('video3');
-video3.style.backgroundImage = 'url(/resources/videos/video3poster.webp)';
+video3.style.backgroundImage = 'url(./resources/videos/video3poster.webp)';
 video3.addEventListener('click', () => {
-    openVideoModal('/resources/videos/video3.mp4');
+    openVideoModal('./resources/videos/video3.mp4');
 });
