@@ -241,7 +241,7 @@ a {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: var(--bg-color);
 }
 
 .hamburger {

@@ -1,13 +1,4 @@
 //CSS functions
-window.addEventListener('load', () => {
-    const storedThemeColors = JSON.parse(localStorage.getItem('themeColors'));
-
-    if (storedThemeColors) {
-        // If there are stored theme colors, apply them
-        setTheme(storedThemeColors.primaryColor, storedThemeColors.bgColor, storedThemeColors.primaryColorOpacity);
-    }
-});
-
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -89,13 +80,4 @@ document.getElementById('theme3').addEventListener('click', () => {
 
 document.getElementById('theme4').addEventListener('click', () => {
     setTheme('#e5901f', '#ffefdd', '#e5901f4d');
-});
-
-window.addEventListener('load', () => {
-    const storedThemeColors = JSON.parse(localStorage.getItem('themeColors'));
-
-    if (storedThemeColors) {
-        // If there are stored theme colors, apply them
-        setTheme(storedThemeColors.primaryColor, storedThemeColors.bgColor, storedThemeColors.primaryColorOpacity);
-    }
 });
